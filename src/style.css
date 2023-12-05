@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #EDE0D4;
+  --secondary: #080708;
+  --tertiary: #FF312E;
+}
+
+html, body, #app {
+  height: 100%;
+  background-color: var(--primary);
+  color: var(--secondary);
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.text-secondary {
+  color: var(--secondary);
+}
+
+.text-tertiary {
+  color: var(--tertiary);
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.bg-secondary {
+  background-color: var(--secondary);
+}
+
+.bg-tertiary {
+  background-color: var(--tertiary);
+}
