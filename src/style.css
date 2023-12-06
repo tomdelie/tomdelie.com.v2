@@ -4,12 +4,11 @@
 
 :root {
   --primary: #EDE0D4;
-  --secondary: #080708;
-  --tertiary: #FF312E;
+  --secondary: #482B25;
+  --tertiary: #ED1C24;
 }
 
-html, body, #app {
-  height: 100%;
+html, body {
   background-color: var(--primary);
   color: var(--secondary);
 }

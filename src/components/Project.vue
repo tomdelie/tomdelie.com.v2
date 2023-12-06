@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import OpenInNew from './OpenInNew.vue';
+
 defineProps({
   title: { type: String, required: true },
   description: { type: String, required: true },
@@ -14,11 +16,11 @@ defineProps({
       <img :src="image" :alt="`Image ${title}`">
     </div>
     <div class="px-4 py-3 bg-secondary relative">
-      <a v-if="link" target="_blank" :href="link"><img class="absolute top-4 right-4" src="/icons/open.svg" alt="Open icon" width="16"></a>
+      <a v-if="link" target="_blank" :href="link"><OpenInNew class="absolute top-4 right-4" /></a>
       <h2 class="text-lg font-bold">{{ title }}</h2>
       <p class="mb-3 mt-1">{{ description }}</p>
       <div class="flex flex-wrap">
-        <span v-for="tag of tags" :key="tag" class="bg-primary text-sm text-secondary px-1.5 py-1 font-medium mr-3">{{ tag }}</span>
+        <span v-for="tag of tags" :key="tag" class="bg-primary text-sm text-secondary px-1.5 mb-1.5 py-1 font-medium mr-1.5">{{ tag }}</span>
       </div>
     </div>
   </div>
