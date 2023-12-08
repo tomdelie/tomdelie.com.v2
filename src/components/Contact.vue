@@ -3,8 +3,8 @@
 
 <template>
   <section class="text-center">
-    <h2 class="text-2xl font-medium mb-6">Envoyer un message</h2>
-    <p class="mt-3 mb-12">
+    <h2 class="text-3xl font-bold mb-12">Envoyer un message</h2>
+    <p class="mt-3 mb-6">
       Vous voulez en savoir plus ? Parler de votre projet ?<br>
       Envoyez-moi un message et discutons-en.
     </p>
@@ -17,6 +17,11 @@ button {
   box-shadow: 6px 6px 0px 0 rgba(0, 0, 0, 0.2);
   background-color: var(--secondary);
   transition: .1s all linear;
+  font-family: 'WorkSans', sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
 }
 button:hover {
   transition: .1s all linear;

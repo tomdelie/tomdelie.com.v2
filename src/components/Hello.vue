@@ -3,8 +3,8 @@
 
 <template>
   <section class="hi text-center flex flex-col align-center justify-center">
-    <h1 class="text-3xl mb-3">Bonjour, je suis <span class="text-tertiary font-medium">Tom Délié</span>.</h1>
-    <h2 class="text-lg">Développeur JavaScript Full Stack</h2>
+    <h1 class="text-4xl font-bold mb-6">Bonjour, je suis <b class="text-tertiary">Tom Délié</b>.</h1>
+    <h3 class="text-lg">Développeur JavaScript Full Stack</h3>
   </section>
 </template>
 

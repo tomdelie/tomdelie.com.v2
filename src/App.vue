@@ -22,7 +22,7 @@ resizeObserver.observe(document.body)
     <Hello class="h-full" />
 
     <section class="projects mb-48 mt-12 flex flex-col items-center">
-      <h2 class="text-2xl font-medium mb-12">Projets</h2>
+      <h2 class="text-3xl font-bold mb-12">Projets</h2>
       <div class="grid grid-cols-1 xl:grid-cols-2 gap-12">
         <Project
           image="/projects/eatic.png"
@@ -42,7 +42,7 @@ resizeObserver.observe(document.body)
     </section>
 
     <section class="skills mb-48 flex flex-col items-center">
-      <h2 class="text-2xl font-medium mb-12">Compétences</h2>
+      <h2 class="text-3xl font-bold mb-12">Compétences</h2>
       <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-12">
         <div>
           <h3 class="font-semibold text-lg mb-2">JavaScript</h3>
@@ -85,7 +85,7 @@ resizeObserver.observe(document.body)
 
   <footer class="bg-secondary text-primary h-48 flex items-center justify-center">
     <div>
-      <p class="mb-3">Imaginé et développé par <span class="font-medium">Tom Délié</span></p>
+      <p class="mb-3">Imaginé et développé par <b class="font-medium">Tom Délié</b></p>
       <div class="flex items-center justify-center">
         <a class="mr-3" href="https://github.com/tomdelie" target="_blank">
           <GitHub />
@@ -105,8 +105,9 @@ resizeObserver.observe(document.body)
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 10;
   width: 100%;
-  opacity: 0.8;
+  opacity: 1;
   background-image: url("https://www.transparenttextures.com/patterns/exclusive-paper.png");
   user-select: none;
   pointer-events: none;
