@@ -14,11 +14,11 @@ html, body {
   letter-spacing: 0.16px;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: 'Lora';
 }
 
-p, span, h3, h4, h5 {
+p, span, h4, h5 {
   font-family: 'WorkSans', sans-serif;
   font-weight: 400;
 }
@@ -49,140 +49,140 @@ p, span, h3, h4, h5 {
 
 @font-face {
   font-family: 'Lora';
-  src: url('/fonts/Lora-Regular.ttf');
+  src: url('/fonts/Lora/Lora-Regular.ttf');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Lora';
-  src: url('/fonts/Lora-Italic.ttf');
+  src: url('/fonts/Lora/Lora-Italic.ttf');
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Lora';
-  src: url('/fonts/Lora-Medium.ttf');
+  src: url('/fonts/Lora/Lora-Medium.ttf');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Lora';
-  src: url('/fonts/Lora-MediumItalic.ttf');
+  src: url('/fonts/Lora/Lora-MediumItalic.ttf');
   font-weight: 500;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Lora';
-  src: url('/fonts/Lora-SemiBold.ttf');
+  src: url('/fonts/Lora/Lora-SemiBold.ttf');
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Lora';
-  src: url('/fonts/Lora-SemiBoldItalic.ttf');
+  src: url('/fonts/Lora/Lora-SemiBoldItalic.ttf');
   font-weight: 600;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Lora';
-  src: url('/fonts/Lora-Bold.ttf');
+  src: url('/fonts/Lora/Lora-Bold.ttf');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Lora';
-  src: url('/fonts/Lora-BoldItalic.ttf');
+  src: url('/fonts/Lora/Lora-BoldItalic.ttf');
   font-weight: 700;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'WorkSans';
-  src: url('/fonts/WorkSans-Regular.ttf');
+  src: url('/fonts/WorkSans/WorkSans-Regular.ttf');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'WorkSans';
-  src: url('/fonts/WorkSans-Italic.ttf');
+  src: url('/fonts/WorkSans/WorkSans-Italic.ttf');
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'WorkSans';
-  src: url('/fonts/WorkSans-Medium.ttf');
+  src: url('/fonts/WorkSans/WorkSans-Medium.ttf');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'WorkSans';
-  src: url('/fonts/WorkSans-MediumItalic.ttf');
+  src: url('/fonts/WorkSans/WorkSans-MediumItalic.ttf');
   font-weight: 500;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'WorkSans';
-  src: url('/fonts/WorkSans-SemiBold.ttf');
+  src: url('/fonts/WorkSans/WorkSans-SemiBold.ttf');
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'WorkSans';
-  src: url('/fonts/WorkSans-SemiBoldItalic.ttf');
+  src: url('/fonts/WorkSans/WorkSans-SemiBoldItalic.ttf');
   font-weight: 600;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'WorkSans';
-  src: url('/fonts/WorkSans-Bold.ttf');
+  src: url('/fonts/WorkSans/WorkSans-Bold.ttf');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'WorkSans';
-  src: url('/fonts/WorkSans-BoldItalic.ttf');
+  src: url('/fonts/WorkSans/WorkSans-BoldItalic.ttf');
   font-weight: 700;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'WorkSans';
-  src: url('/fonts/WorkSans-ExtraBold.ttf');
+  src: url('/fonts/WorkSans/WorkSans-ExtraBold.ttf');
   font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'WorkSans';
-  src: url('/fonts/WorkSans-ExtraBoldItalic.ttf');
+  src: url('/fonts/WorkSans/WorkSans-ExtraBoldItalic.ttf');
   font-weight: 800;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'WorkSans';
-  src: url('/fonts/WorkSans-Black.ttf');
+  src: url('/fonts/WorkSans/WorkSans-Black.ttf');
   font-weight: 900;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'WorkSans';
-  src: url('/fonts/WorkSans-BlackItalic.ttf');
+  src: url('/fonts/WorkSans/WorkSans-BlackItalic.ttf');
   font-weight: 900;
   font-style: italic;
 }

@@ -18,7 +18,7 @@ defineProps({
     <div class="px-4 py-3 bg-secondary relative">
       <a v-if="link" target="_blank" :href="link"><OpenInNew class="absolute top-4 right-4" /></a>
       <h3 class="text-lg font-bold">{{ title }}</h3>
-      <p class="mb-3 mt-1">{{ description }}</p>
+      <p class="mb-4 mt-2">{{ description }}</p>
       <div class="flex flex-wrap">
         <span v-for="tag of tags" :key="tag" class="bg-primary text-sm text-secondary px-1.5 mb-1.5 py-1 font-medium mr-1.5">{{ tag }}</span>
       </div>
