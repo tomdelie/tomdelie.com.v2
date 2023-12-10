@@ -2,12 +2,6 @@
 import OpenInNew from './OpenInNew.vue';
 import { onMounted, ref } from 'vue';
 
-const styles = [`
-.swiper-button-prev {
-  color: red;
-}
-`];
-
 const swiperEl = ref();
 
 onMounted(() => {

@@ -4,12 +4,12 @@
 
 <style scoped>
 #github {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
 }
 
 #github path {
-  fill: var(--primary);
+  fill: var(--secondary);
   transition: .1s all linear;
 }
 

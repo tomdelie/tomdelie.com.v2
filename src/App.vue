@@ -4,6 +4,7 @@ import Project from './components/Project.vue';
 import Skill from './components/Skill.vue';
 import GitHub from './components/GitHub.vue';
 import Linkedin from './components/Linkedin.vue';
+import Malt from './components/Malt.vue';
 import Lettrine from './components/Lettrine.vue';
 import Contact from './components/Contact.vue';
 import { ref } from 'vue';
@@ -100,11 +101,14 @@ resizeObserver.observe(document.body);
     <div>
       <p class="mb-3">Développé par <b class="font-semibold">Tom Délié</b></p>
       <div class="flex items-center justify-center">
-        <a class="mr-3" href="https://github.com/tomdelie" target="_blank">
+        <a class="border rounded-lg bg-primary p-1 mr-3" href="https://github.com/tomdelie" target="_blank">
           <GitHub />
         </a>
-        <a href="https://www.linkedin.com/in/tom-d%C3%A9li%C3%A9-44a298159/" target="_blank">
+        <a class="border rounded-lg bg-primary p-1 mr-3" href="https://www.linkedin.com/in/tom-d%C3%A9li%C3%A9-44a298159/" target="_blank">
           <Linkedin />
+        </a>
+        <a class="border rounded-lg bg-primary p-1" href="https://www.malt.fr/profile/tomdelie" target="_blank">
+          <Malt />
         </a>
       </div>
     </div>
