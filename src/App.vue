@@ -31,18 +31,25 @@ resizeObserver.observe(document.body);
       <h2 class="text-3xl font-bold mb-16"><b class="text-4xl">P</b>rojets</h2>
       <div class="grid grid-cols-1 xl:grid-cols-2 gap-12">
         <Project
-          image="/projects/eatic.png"
+          :images="['/projects/eatic.png']"
           title="Eatic"
           link="https://eatic.fr/"
           description="Développement d'une application web et mobile de livraison de repas végétarien"
           :tags="['Typescript', 'Vue.js', 'Node.js', 'SQL', 'Paiement en ligne']"
         />
         <Project
-          image="/projects/pixel_world.png"
+          :images="['/projects/baccarat_alchimie_1.png', '/projects/baccarat_alchimie_2.png', '/projects/baccarat_alchimie_3.png']"
+          title="Baccarat - Alchimie"
+          link="https://baccarat-heritage.com/fr/alchimie/"
+          description="Développement d'un thème Wordpress personnalisé."
+          :tags="['Wordpress', 'ACF', 'Polylang', 'CSS']"
+        />
+        <Project
+          :images="['/projects/pixel_world_1.png', '/projects/pixel_world_2.png', '/projects/pixel_world_3.png']"
           title="Pixel World"
           link="https://tomdelie.itch.io/pixel-world"
           description="Projet personnel. Jeu de plateforme en 2D réalisé avec Godot Engine."
-          :tags="['Godot Engine']"
+          :tags="['Godot Engine', 'GDScript']"
         />
       </div>
     </section>
