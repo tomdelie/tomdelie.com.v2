@@ -49,7 +49,8 @@ onMounted(() => {
       }
 
       .swiper-pagination-bullet {
-        background-color: var(--secondary);
+        opacity: 1 !important;
+        background-color: var(--tertiary);
       }
       `,
     ],

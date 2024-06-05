@@ -26,7 +26,7 @@
   transition: .1s all linear;
 }
 
-#lettrine:hover path:first-child {
+/* #lettrine:hover path:first-child {
   fill: var(--tertiary);
   transition: .1s all linear;
 }
@@ -34,5 +34,5 @@
 #lettrine:hover path:last-child {
   stroke: var(--tertiary);
   transition: .1s all linear;
-}
+} */
 </style>

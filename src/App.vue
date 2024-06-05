@@ -32,17 +32,31 @@ resizeObserver.observe(document.body);
       <h2 class="text-3xl font-bold mb-16"><b class="text-4xl">P</b>rojets</h2>
       <div class="grid grid-cols-1 xl:grid-cols-2 gap-12">
         <Project
+          :images="['/projects/ttg_1.png', '/projects/ttg_2.png', '/projects/ttg_3.png', '/projects/ttg_4.png']"
+          title="Book a visit - Taittinger"
+          link="https://book-a-visit.taittinger.fr/"
+          description="Développement d'un site web de réservation en ligne"
+          :tags="['Typescript', 'Nuxt', 'NestJS', 'SQL', 'Stripe']"
+        />
+        <Project
           :images="['/projects/eatic.png']"
           title="Eatic"
           link="https://eatic.fr/"
           description="Développement d'une application web et mobile de livraison de repas végétarien"
-          :tags="['Typescript', 'Vue.js', 'Node.js', 'SQL', 'Paiement en ligne']"
+          :tags="['Typescript', 'Vue.js', 'Node.js', 'SQL', 'Stripe', 'Paygreen', 'Edenred']"
         />
         <Project
           :images="['/projects/baccarat_alchimie_1.png', '/projects/baccarat_alchimie_2.png', '/projects/baccarat_alchimie_3.png']"
           title="Baccarat - Alchimie"
           link="https://baccarat-heritage.com/fr/alchimie/"
-          description="Développement d'un thème Wordpress personnalisé."
+          description="Développement d'un thème Wordpress."
+          :tags="['Wordpress', 'ACF', 'Polylang', 'CSS']"
+        />
+        <Project
+          :images="['/projects/viking_1.png', '/projects/viking_2.png', '/projects/viking_3.png']"
+          title="Viking - Cités Immersives"
+          link="https://viking.cites-immersives.fr/fr"
+          description="Développement d'un thème Wordpress."
           :tags="['Wordpress', 'ACF', 'Polylang', 'CSS']"
         />
         <Project
