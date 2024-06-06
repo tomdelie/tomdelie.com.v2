@@ -6,6 +6,7 @@ import GitHub from './components/GitHub.vue';
 import Linkedin from './components/Linkedin.vue';
 import Malt from './components/Malt.vue';
 import Lettrine from './components/Lettrine.vue';
+import LettrineCorner from './components/LettrineCorner.vue';
 import Contact from './components/Contact.vue';
 import { ref } from 'vue';
 
@@ -25,6 +26,9 @@ resizeObserver.observe(document.body);
     <Lettrine class="ml-12 mt-6" />
     <div></div>
   </header>
+  <div class="absolute top-6 right-6">
+    <LettrineCorner />
+  </div>
   <div class="container w-full px-2 lg:px-0 lg:w-4/5 mx-auto">
     <Hello class="h-full" />
 

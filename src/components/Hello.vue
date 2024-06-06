@@ -5,7 +5,7 @@
   <section class="hi text-center flex flex-col align-center justify-center">
     <h1 class="text-4xl font-bold mb-6"><b class="text-5xl">B</b>onjour, je suis <b class="text-tertiary">Tom Délié</b>.</h1>
     <h3 class="text-lg">Développeur JavaScript Full Stack</h3>
-    <img class="transition" src="/icons/transition.svg" width="50" alt="Transition svg">
+    <img class="transition" src="/icons/transition.svg" width="35" alt="Transition svg">
   </section>
 </template>
 

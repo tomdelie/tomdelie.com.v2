@@ -72,12 +72,12 @@ defineProps({
 
 <template>
   <div class="project flex flex-col">
-    <div class="z-20 relative">
+    <div class="relative">
       <swiper-container ref="swiperEl" :init="false" navigation="true" pagination-dynamic-bullets="true">
-        <swiper-slide v-for="image of images"><img class="relative z-20" :src="image" :alt="`Image ${title}`"></swiper-slide>
+        <swiper-slide v-for="image of images"><img class="relative" :src="image" :alt="`Image ${title}`"></swiper-slide>
       </swiper-container>
     </div>
-    <div class="px-4 py-3 bg-secondary relative">
+    <div class="px-4 py-3 bg-secondary relative h-full">
       <a v-if="link" target="_blank" :href="link"><OpenInNew class="absolute top-4 right-4" /></a>
       <h3 class="text-lg font-bold">{{ title }}</h3>
       <p class="mb-4 mt-2">{{ description }}</p>
