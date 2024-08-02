@@ -3,7 +3,7 @@
 
 <template>
   <section class="text-center">
-    <h2 class="text-3xl font-bold mb-16"><b class="text-4xl">E</b>nvoyer un message</h2>
+    <h2 class="text-3xl lg:text-4xl font-bold mb-16"><b class="text-4xl lg:text-5xl">E</b>nvoyer un message</h2>
     <p class="mt-3 mb-6">
       Vous voulez en savoir plus ? Parler de votre projet ?<br>
       Envoyez-moi un message et discutons-en.

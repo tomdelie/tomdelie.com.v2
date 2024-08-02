@@ -23,33 +23,35 @@ resizeObserver.observe(document.body);
 
 <template>
   <header class="absolute top-0 left-0 right-0 w-full flex items-center justify-between">
-    <Lettrine class="ml-12 mt-6" />
+    <Lettrine class="mt-0 ml-0 lg:ml-6 lg:mt-6" />
     <div></div>
   </header>
-  <div class="absolute top-6 right-6">
+  <div class="absolute top-3 right-3 lg:top-12 lg:right-12">
     <LettrineCorner />
   </div>
   <div class="container w-full px-2 lg:px-0 lg:w-4/5 mx-auto">
     <Hello class="h-full" />
 
     <section class="projects mb-48 mt-48 flex flex-col items-center">
-      <h2 class="text-3xl font-bold mb-16"><b class="text-4xl">P</b>rojets</h2>
-      <div class="grid grid-cols-1 xl:grid-cols-2 gap-12">
+      <h2 class="text-3xl lg:text-4xl font-bold mb-16"><b class="text-4xl lg:text-5xl">P</b>rojets</h2>
+      <div class="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-12">
         <Project
+          id="ttg"
           :images="['/projects/ttg_1.png', '/projects/ttg_2.png', '/projects/ttg_3.png', '/projects/ttg_4.png']"
           title="Book a visit - Taittinger"
           link="https://book-a-visit.taittinger.fr/"
-          description="Développement d'un site web de réservation en ligne"
-          :tags="['Typescript', 'Nuxt', 'NestJS', 'SQL', 'Stripe']"
+          description="Site web de réservation en ligne."
+          :tags="['Typescript', 'Nuxt', 'NestJS', 'Stripe']"
         />
         <Project
+          id="eatic"
           :images="['/projects/eatic.png']"
           title="Eatic"
-          link="https://eatic.fr/"
-          description="Développement d'une application web et mobile de livraison de repas végétarien"
-          :tags="['Typescript', 'Vue.js', 'Node.js', 'SQL', 'Stripe', 'Paygreen', 'Edenred']"
+          description="Application web et mobile de livraison de repas."
+          :tags="['Typescript', 'Vue.js', 'Node.js', 'Stripe', 'Cordova']"
         />
         <Project
+          id="alchimie"
           :images="['/projects/baccarat_alchimie_1.png', '/projects/baccarat_alchimie_2.png', '/projects/baccarat_alchimie_3.png']"
           title="Baccarat - Alchimie"
           link="https://baccarat-heritage.com/fr/alchimie/"
@@ -57,6 +59,7 @@ resizeObserver.observe(document.body);
           :tags="['Wordpress', 'ACF', 'Polylang', 'CSS']"
         />
         <Project
+          id="viking"
           :images="['/projects/viking_1.png', '/projects/viking_2.png', '/projects/viking_3.png']"
           title="Viking - Cités Immersives"
           link="https://viking.cites-immersives.fr/fr"
@@ -64,17 +67,18 @@ resizeObserver.observe(document.body);
           :tags="['Wordpress', 'ACF', 'Polylang', 'CSS']"
         />
         <Project
+          id="pixel"
           :images="['/projects/pixel_world_1.png', '/projects/pixel_world_2.png', '/projects/pixel_world_3.png']"
           title="Pixel World"
           link="https://tomdelie.itch.io/pixel-world"
-          description="Projet personnel. Jeu de plateforme en 2D réalisé avec Godot Engine."
+          description="Projet personnel, jeu de plateforme en 2D."
           :tags="['Godot Engine', 'GDScript']"
         />
       </div>
     </section>
 
     <section class="skills mb-48 flex flex-col items-center">
-      <h2 class="text-3xl font-bold mb-16"><b class="text-4xl">C</b>ompétences</h2>
+      <h2 class="text-3xl lg:text-4xl font-bold mb-16"><b class="text-4xl lg:text-5xl">C</b>ompétences</h2>
       <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-12">
         <div>
           <h3 class="font-semibold text-lg mb-2">JavaScript</h3>
