@@ -122,11 +122,13 @@ onMounted(() => {
 
   document.querySelectorAll('.follower-trigger').forEach((trigger) => {
     trigger.addEventListener('mouseenter', () => {
+      if (window.innerWidth < 1024) return;
       cursorFollower.value.classList.remove('scale-0');
       cursorFollower.value.classList.add('scale-100');
     });
 
     trigger.addEventListener('mouseleave', () => {
+      if (window.innerWidth < 1024) return;
       cursorFollower.value.classList.remove('scale-100');
       cursorFollower.value.classList.add('scale-0');
     });
