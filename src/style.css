@@ -23,6 +23,12 @@ p, span, h4, h5 {
   font-weight: 400;
 }
 
+:focus-visible {
+  outline-style: dashed;
+  outline-color: var(--tertiary);
+  outline-width: 2px;
+}
+
 .bg-blur {
   position: relative;
 }
