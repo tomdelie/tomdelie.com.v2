@@ -77,7 +77,7 @@ const projects = ref([
     id: 'shaders',
     type: ProjectType.PERSO,
     title: 'Shaders',
-    description: 'Un peu d\'imagination avec les shaders.',
+    description: 'Un peu d\'imagination et de maths avec les shaders.',
     link: 'https://www.shadertoy.com/user/tomdelie',
     images: ['/projects/snowflake.png'],
     tags: ['GLSL'],
