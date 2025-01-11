@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Loader from './components/Loader.vue';
 import Hello from './components/Hello.vue';
 import Project from './components/Project.vue';
 import ProjectModal from './components/ProjectModal.vue';
@@ -16,6 +17,7 @@ enum ProjectType {
   PERSO = 2
 }
 
+const loaded = ref(false);
 const filter = ref();
 const cursorFollower = ref();
 const projects = ref([
@@ -118,6 +120,10 @@ window.addEventListener('resize', () => {
 });
 
 onMounted(() => {
+  setTimeout(() => {
+    loaded.value = true;
+  }, 2000);
+
   animateFollower();
 
   document.querySelectorAll('.follower-trigger').forEach((trigger) => {
@@ -157,6 +163,10 @@ function animateFollower() {
 </script>
 
 <template>
+  <Transition>
+    <Loader v-if="!loaded" transition="fade" />
+  </Transition>
+
   <div ref="cursorFollower" class="pointer-events-none select-none fixed w-[80px] h-[80px] z-[1000] rounded-full overflow-hidden shadow transition-transform scale-0 duration-300">
     <div class="border uppercase border-secondary rounded-full w-full h-full bg-blur bg-blur-full flex items-center justify-center text-secondary font-medium text-sm tracking-[0.15em]">
       Voir
@@ -164,7 +174,7 @@ function animateFollower() {
   </div>
 
   <header class="absolute top-0 left-0 right-0 w-full flex items-center justify-between">
-    <Lettrine class="mt-0 ml-0 lg:ml-6 lg:mt-6" />
+    <Lettrine class="w-[112px] scale-75 lg:scale-100 mt-0 ml-0 lg:ml-6 lg:mt-6" />
     <div></div>
   </header>
 
@@ -266,6 +276,16 @@ function animateFollower() {
 </template>
 
 <style scoped>
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+
 .filter {
   position: absolute;
   top: 0;
