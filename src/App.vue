@@ -191,13 +191,13 @@ function animateFollower() {
       <h2 class="text-3xl lg:text-4xl font-bold mb-8"><b class="text-4xl lg:text-5xl">P</b>rojets</h2>
 
       <ul class="flex mb-8 select-none text-sm font-medium">
-        <li class="px-3 py-1.5 border-secondary border cursor-pointer" :class="[selectedType === 0 ? 'bg-secondary text-primary' : 'bg-primary text-secondary']" @click="selectedType = 0">
+        <li class="px-3 py-1.5 border-secondary border cursor-pointer" :class="[selectedType === 0 ? 'bg-secondary text-primary' : 'bg-primary text-secondary hover:bg-tertiary hover:text-primary hover:border-tertiary duration-200']" @click="selectedType = 0">
           <span class="font-medium">Tous</span>
         </li>
-        <li class="mx-3 px-3 py-1.5 border-secondary border cursor-pointer" :class="[selectedType === 1 ? 'bg-secondary text-primary' : 'bg-primary text-secondary']" @click="selectedType = 1">
+        <li class="mx-3 px-3 py-1.5 border-secondary border cursor-pointer" :class="[selectedType === 1 ? 'bg-secondary text-primary' : 'bg-primary text-secondary hover:bg-tertiary hover:text-primary hover:border-tertiary duration-200']" @click="selectedType = 1">
           <span class="font-medium">Professionnel</span>
         </li>
-        <li class="px-3 py-1.5 border-secondary border cursor-pointer" :class="[selectedType === 2 ? 'bg-secondary text-primary' : 'bg-primary text-secondary']" @click="selectedType = 2">
+        <li class="px-3 py-1.5 border-secondary border cursor-pointer" :class="[selectedType === 2 ? 'bg-secondary text-primary' : 'bg-primary text-secondary hover:bg-tertiary hover:text-primary hover:border-tertiary duration-200']" @click="selectedType = 2">
           <span class="font-medium">Personnel</span>
         </li>
       </ul>
@@ -259,13 +259,13 @@ function animateFollower() {
     <div>
       <p class="mb-3">Développé par <b class="font-semibold">Tom Délié</b></p>
       <div class="flex items-center justify-center">
-        <a class="border rounded-lg bg-primary p-1 mr-3" href="https://github.com/tomdelie" target="_blank">
+        <a class="border bg-primary p-1 mr-3" href="https://github.com/tomdelie" target="_blank">
           <GitHub />
         </a>
-        <a class="border rounded-lg bg-primary p-1 mr-3" href="https://www.linkedin.com/in/tom-d%C3%A9li%C3%A9-44a298159/" target="_blank">
+        <a class="border bg-primary p-1 mr-3" href="https://www.linkedin.com/in/tom-d%C3%A9li%C3%A9-44a298159/" target="_blank">
           <Linkedin />
         </a>
-        <a class="border rounded-lg bg-primary p-1" href="https://www.malt.fr/profile/tomdelie" target="_blank">
+        <a class="border bg-primary p-1" href="https://www.malt.fr/profile/tomdelie" target="_blank">
           <Malt />
         </a>
       </div>

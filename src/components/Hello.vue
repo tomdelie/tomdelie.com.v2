@@ -10,13 +10,13 @@ import Malt from './../components/Malt.vue';
     <h3 class="text-lg 2xl:text-xl">Développeur JavaScript Full Stack</h3>
 
     <div class="flex items-center justify-center mt-8">
-      <a class="border rounded-lg bg-secondary hover:bg-tertiary duration-100 p-1 mr-3" href="https://github.com/tomdelie" target="_blank">
+      <a class="border bg-secondary hover:bg-tertiary duration-100 p-1 mr-3" href="https://github.com/tomdelie" target="_blank">
         <GitHub :inversed="true" />
       </a>
-      <a class="border rounded-lg bg-secondary hover:bg-tertiary duration-100 p-1 mr-3" href="https://www.linkedin.com/in/tom-d%C3%A9li%C3%A9-44a298159/" target="_blank">
+      <a class="border bg-secondary hover:bg-tertiary duration-100 p-1 mr-3" href="https://www.linkedin.com/in/tom-d%C3%A9li%C3%A9-44a298159/" target="_blank">
         <Linkedin :inversed="true" />
       </a>
-      <a class="border rounded-lg bg-secondary hover:bg-tertiary duration-100 p-1" href="https://www.malt.fr/profile/tomdelie" target="_blank">
+      <a class="border bg-secondary hover:bg-tertiary duration-100 p-1" href="https://www.malt.fr/profile/tomdelie" target="_blank">
         <Malt :inversed="true" />
       </a>
     </div>
