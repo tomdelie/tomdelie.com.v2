@@ -15,9 +15,4 @@
 </template>
 
 <style scoped>
-#lettrine {
-  width: 112px;
-  height: 127px;
-  cursor: pointer;
-}
 </style>

@@ -91,10 +91,18 @@ onMounted(() => {
       <input class="form-hp" v-model="honeypot.url" autocomplete="off" type="text" tabindex="-1" name="url" />
       <input class="form-hp" v-model="honeypot.phone" autocomplete="off" type="text" tabindex="-1" name="phone" />
 
-      <input v-model="form.email" :disabled="success || loading" required type="email" class="px-3 py-1.5 border border-secondary bg-primary placeholder:text-secondary placeholder:opacity-70 text-sm mb-3" name="oazdjkazdojve" placeholder="Votre email" />
-      <textarea v-model="form.message" :disabled="success || loading" required class="p-3 border border-secondary bg-primary placeholder:text-secondary placeholder:opacity-70 text-sm min-h-[100px] max-h-[400px]" rows="6" name="kqsdoiazcnize" placeholder="Votre message..."></textarea>
-      <button type="submit" :disabled="success || loading" class="py-3 text-primary mt-3 mx-auto w-full max-w-[200px] flex items-center justify-center">
-        <span v-if="!loading && !success" class="font-medium">Envoyer</span>
+      <div class="flex flex-col items-start mb-5">
+        <label class="text-sm mb-1" for="oazdjkazdojve">Email</label>
+        <input class="px-3 py-1.5 border border-secondary bg-primary placeholder:text-secondary placeholder:opacity-70 text-sm w-full" v-model="form.email" :disabled="success || loading" required type="email" name="oazdjkazdojve" placeholder="contact@email.com" />
+      </div>
+      
+      <div class="flex flex-col items-start">
+        <label class="text-sm mb-1" for="oazdjkazdojve">Message</label>
+        <textarea class="w-full p-3 border border-secondary bg-primary placeholder:text-secondary placeholder:opacity-70 text-sm min-h-[100px] max-h-[400px]" v-model="form.message" :disabled="success || loading" required rows="6" name="kqsdoiazcnize" placeholder="Bonjour,"></textarea>
+      </div>
+
+      <button type="submit" :disabled="success || loading" class="py-3 text-primary mt-6 mx-auto w-full  flex items-center justify-center">
+        <span v-if="!loading && !success" class="font-medium translate-y-[1px]">Envoyer</span>
         
         <img v-if="loading" id="loading" src="/icons/loading.svg" width="18" alt="Loading">
 

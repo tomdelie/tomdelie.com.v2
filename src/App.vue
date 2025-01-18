@@ -202,7 +202,7 @@ function animateFollower() {
   </div>
 
   <header class="absolute top-0 left-0 right-0 w-full flex items-center justify-between">
-    <Lettrine class="w-[112px] scale-75 lg:scale-100 mt-0 ml-0 lg:ml-6 lg:mt-6" />
+    <Lettrine class="w-[80px] lg:w-[100px] mt-3 ml-3 lg:ml-6 lg:mt-6" />
     <div></div>
   </header>
 
@@ -286,16 +286,19 @@ function animateFollower() {
 
   <footer class="bg-secondary text-primary h-48 flex items-center justify-center">
     <div>
-      <p class="mb-3">Développé par <b class="font-semibold">Tom Délié</b></p>
+      <p class="mb-3 text-center text-sm">Développé par Tom Délié</p>
       <div class="flex items-center justify-center">
-        <a class="border bg-primary p-1 mr-3" href="https://github.com/tomdelie" target="_blank">
-          <GitHub />
+        <a class="group flex items-center mr-6" href="https://github.com/tomdelie" target="_blank">
+          <GitHub class="text-primary group-hover:text-tertiary duration-100 w-[16px]" />
+          <span class="ml-1 text-primary group-hover:text-tertiary duration-100 text-sm font-medium translate-y-[1px]">GitHub</span>
         </a>
-        <a class="border bg-primary p-1 mr-3" href="https://www.linkedin.com/in/tom-d%C3%A9li%C3%A9-44a298159/" target="_blank">
-          <Linkedin />
+        <a class="group flex items-center mr-6" href="https://www.linkedin.com/in/tom-d%C3%A9li%C3%A9-44a298159/" target="_blank">
+          <Linkedin class="text-primary group-hover:text-tertiary duration-100 w-[16px]" />
+          <span class="ml-1 text-primary group-hover:text-tertiary duration-100 text-sm font-medium translate-y-[1px]">LinkedIn</span>
         </a>
-        <a class="border bg-primary p-1" href="https://www.malt.fr/profile/tomdelie" target="_blank">
-          <Malt />
+        <a class="group flex items-center" href="https://www.malt.fr/profile/tomdelie" target="_blank">
+          <Malt class="text-primary group-hover:text-tertiary duration-100 w-[16px]" />
+          <span class="ml-1 text-primary group-hover:text-tertiary duration-100 text-sm font-medium translate-y-[1px]">Malt</span>
         </a>
       </div>
     </div>

@@ -10,14 +10,17 @@ import Malt from './../components/Malt.vue';
     <h3 class="text-lg 2xl:text-xl">Développeur JavaScript Full Stack</h3>
 
     <div class="flex items-center justify-center mt-8">
-      <a class="border bg-secondary hover:bg-tertiary duration-100 p-1 mr-3" href="https://github.com/tomdelie" target="_blank">
-        <GitHub :inversed="true" />
+      <a class="flex items-center border bg-secondary hover:bg-tertiary duration-100 px-1.5 py-1 mr-3" href="https://github.com/tomdelie" target="_blank">
+        <GitHub class="text-primary w-[18px]" />
+        <span class="ml-1 text-primary text-sm translate-y-[1px]">GitHub</span>
       </a>
-      <a class="border bg-secondary hover:bg-tertiary duration-100 p-1 mr-3" href="https://www.linkedin.com/in/tom-d%C3%A9li%C3%A9-44a298159/" target="_blank">
-        <Linkedin :inversed="true" />
+      <a class="flex items-center border bg-secondary hover:bg-tertiary duration-100 px-1.5 py-1 mr-3" href="https://www.linkedin.com/in/tom-d%C3%A9li%C3%A9-44a298159/" target="_blank">
+        <Linkedin class="text-primary w-[18px]" />
+        <span class="ml-1 text-primary text-sm translate-y-[1px]">LinkedIn</span>
       </a>
-      <a class="border bg-secondary hover:bg-tertiary duration-100 p-1" href="https://www.malt.fr/profile/tomdelie" target="_blank">
-        <Malt :inversed="true" />
+      <a class="flex items-center border bg-secondary hover:bg-tertiary duration-100 px-1.5 py-1" href="https://www.malt.fr/profile/tomdelie" target="_blank">
+        <Malt class="text-primary w-[18px]" />
+        <span class="ml-1 text-primary text-sm translate-y-[1px]">Malt</span>
       </a>
     </div>
 
