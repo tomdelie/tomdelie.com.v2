@@ -28,7 +28,12 @@ const projects = ref([
     description: 'Site web de réservation en ligne.',
     link: 'https://book-a-visit.taittinger.fr/',
     images: ['/projects/ttg_1.png', '/projects/ttg_2.png', '/projects/ttg_3.png', '/projects/ttg_4.png'],
-    tags: ['Typescript', 'Nuxt', 'NestJS', 'Stripe'],
+    tags: [
+      { name: 'TypeScript', icon: '/icons/javascript/typescript.svg' },
+      { name: 'Nuxt', icon: '/icons/javascript/nuxtjs.svg' },
+      { name: 'NestJS', icon: '/icons/javascript/nestjs.svg' },
+      { name: 'Stripe', icon: '/icons/others/stripe.svg' }
+    ],
   },
   {
     id: 'eatic',
@@ -37,7 +42,12 @@ const projects = ref([
     description: 'Application web et mobile de livraison de repas.',
     link: '',
     images: ['/projects/eatic.png'],
-    tags: ['Typescript', 'Vue.js', 'Node.js', 'Stripe', 'Cordova'],
+    tags: [
+      { name: 'TypeScript', icon: '/icons/javascript/typescript.svg' },
+      { name: 'Vue.js', icon: '/icons/javascript/vuejs.svg' },
+      { name: 'Node.js', icon: '/icons/javascript/nodejs.svg' },
+      { name: 'Stripe', icon: '/icons/others/stripe.svg' }
+    ],
   },
   {
     id: 'alchimie',
@@ -46,7 +56,12 @@ const projects = ref([
     description: 'Développement d\'un thème Wordpress.',
     link: 'https://baccarat-heritage.com/fr/alchimie/',
     images: ['/projects/baccarat_alchimie_1.png', '/projects/baccarat_alchimie_2.png', '/projects/baccarat_alchimie_3.png'],
-    tags: ['Wordpress', 'ACF', 'Polylang', 'CSS'],
+    tags: [
+      { name: 'Wordpress', icon: '/icons/php/wordpress.svg' },
+      { name: 'ACF', icon: '/icons/php/wordpress.svg' },
+      { name: 'Polylang', icon: '/icons/php/wordpress.svg' },
+      { name: 'CSS', icon: '/icons/others/css.svg' }
+    ],
   },
   {
     id: 'viking',
@@ -55,7 +70,12 @@ const projects = ref([
     description: 'Développement d\'un thème Wordpress.',
     link: 'https://viking.cites-immersives.fr/fr',
     images: ['/projects/viking_1.png', '/projects/viking_2.png', '/projects/viking_3.png'],
-    tags: ['Wordpress', 'ACF', 'Polylang', 'CSS'],
+    tags: [
+      { name: 'Wordpress', icon: '/icons/php/wordpress.svg' },
+      { name: 'ACF', icon: '/icons/php/wordpress.svg' },
+      { name: 'Polylang', icon: '/icons/php/wordpress.svg' },
+      { name: 'CSS', icon: '/icons/others/css.svg' }
+    ],
   },
   {
     id: 'pixel',
@@ -64,16 +84,22 @@ const projects = ref([
     description: 'Développement d\'un jeu de plateforme en 2D.',
     link: 'https://tomdelie.itch.io/pixel-world',
     images: ['/projects/pixel_world_1.png', '/projects/pixel_world_2.png', '/projects/pixel_world_3.png'],
-    tags: ['Godot 3.2', 'GDScript'],
+    tags: [
+      { name: 'Godot 3.2', icon: '/icons/others/godotengine.svg' },
+      { name: 'GDScript', icon: '/icons/others/godotengine.svg' }
+    ],
   },
   // {
   //   id: 'bomberman',
   //   type: ProjectType.PERSO,
-  //   title: 'Bomberman',
+  //   title: 'Bomberman en ligne',
   //   description: 'Développment d\'un bomberman multijoueur.',
   //   link: 'https://tomdelie.itch.io/pixel-world',
   //   images: ['/projects/placeholder.png'],
-  //   tags: ['Godot 4.3', 'GDScript', 'Multijoueur'],
+  //   tags: [
+  //     { name: 'Godot 4.3', icon: '/icons/others/godotengine.svg' },
+  //     { name: 'GDScript', icon: '/icons/others/godotengine.svg' }
+  //   ],
   // },
   {
     id: 'shaders',
@@ -82,7 +108,9 @@ const projects = ref([
     description: 'Un peu d\'imagination et de maths avec les shaders.',
     link: 'https://www.shadertoy.com/user/tomdelie',
     images: ['/projects/snowflake.png'],
-    tags: ['GLSL'],
+    tags: [
+      { name: 'GLSL', icon: '/icons/others/opengl.svg' }
+    ],
   },
 ]);
 const projectSelected = ref();
@@ -220,7 +248,7 @@ function animateFollower() {
           <Skill :level="3" title="TypeScript" image="/icons/javascript/typescript.svg" :isFavorite="true" />
           <Skill :level="3" title="Vue.js" image="/icons/javascript/vuejs.svg" :isFavorite="true" />
           <Skill :level="3" title="Node.js" image="/icons/javascript/nodejs.svg" :isFavorite="true" />
-          <Skill :level="2" title="NestJS" image="/icons/javascript/nestjs.svg" :isFavorite="true" />
+          <Skill :level="2" title="NestJS" image="/icons/javascript/nestjs.svg" />
           <Skill :level="2" title="Nuxt" image="/icons/javascript/nuxtjs.svg" />
           <Skill :level="2" title="Express" image="/icons/javascript/express.svg" />
           <Skill :level="1" title="Svelte" image="/icons/javascript/svelte.svg" />
@@ -239,6 +267,7 @@ function animateFollower() {
           <h3 class="font-semibold text-lg mb-2">PHP</h3>
           <Skill :level="2" title="PHP" image="/icons/php/php.svg" />
           <Skill :level="2" title="Laravel" image="/icons/php/laravel.svg" />
+          <Skill :level="2" title="Wordpress" image="/icons/php/wordpress.svg" />
           <Skill :level="1" title="Symfony" image="/icons/php/symfony.svg" />
         </div>
 

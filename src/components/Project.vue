@@ -8,7 +8,7 @@ const props = defineProps({
   description: { type: String, required: true },
   images: { type: Array<string>, required: true },
   link: { type: String, required: false },
-  tags: { type: Array<string>, required: true },
+  tags: { type: Array<{ name: string, icon: string }>, required: true },
 });
 
 onMounted(() => {
@@ -59,7 +59,10 @@ onMounted(() => {
       <h3 class="text-lg font-bold">{{ title }}</h3>
       <p class="mb-4 mt-2">{{ description }}</p>
       <div class="flex flex-wrap">
-        <span v-for="tag of tags" :key="tag" class="bg-primary text-sm text-secondary px-1.5 mb-1.5 py-1 font-medium mr-1.5">{{ tag }}</span>
+        <div v-for="t of tags" :key="t.name" class="flex items-center bg-primary text-sm text-secondary px-1 mb-1.5 py-0.5 mr-1.5">
+          <img class="w-[16px] h-[16px] mr-1" :src="t.icon" alt="Icon">
+          <span class="font-medium">{{ t.name }}</span>
+        </div>
       </div>
     </div>
   </div>
