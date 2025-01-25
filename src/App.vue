@@ -78,6 +78,20 @@ const projects = ref([
     ],
   },
   {
+    id: 'photocinelive',
+    type: ProjectType.PRO,
+    title: 'PhotoCineLive',
+    description: 'Développement d\'un thème Wordpress.',
+    link: 'https://photocinelive.com/fr',
+    images: ['/projects/pcl_1.png', '/projects/pcl_2.png', '/projects/pcl_3.png', '/projects/pcl_4.png'],
+    tags: [
+      { name: 'Wordpress', icon: '/icons/php/wordpress.svg' },
+      { name: 'ACF', icon: '/icons/php/wordpress.svg' },
+      { name: 'Polylang', icon: '/icons/php/wordpress.svg' },
+      { name: 'CSS', icon: '/icons/others/css.svg' }
+    ],
+  },
+  {
     id: 'pixel',
     type: ProjectType.PERSO,
     title: 'Pixel World',
