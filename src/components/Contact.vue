@@ -80,8 +80,8 @@ onMounted(() => {
 </script>
 
 <template>
-  <section class="text-center">
-    <h2 class="text-3xl lg:text-4xl font-bold mb-16"><b class="text-4xl lg:text-5xl">E</b>nvoyer un message</h2>
+  <section class="text-center container">
+    <h2 id="contact" class="text-3xl lg:text-5xl font-bold mb-16 uppercase">III. Contact</h2>
     <p class="mt-3">
       Vous voulez en savoir plus ? Parler de votre projet ?<br>
       Envoyez-moi un message et discutons-en.
@@ -101,7 +101,7 @@ onMounted(() => {
         <textarea class="w-full p-3 border border-secondary bg-primary placeholder:text-secondary placeholder:opacity-70 text-sm min-h-[100px] max-h-[400px]" v-model="form.message" :disabled="success || loading" required rows="6" name="kqsdoiazcnize" placeholder="Bonjour,"></textarea>
       </div>
 
-      <button type="submit" :disabled="success || loading" class="py-3 text-primary mt-6 mx-auto w-full  flex items-center justify-center">
+      <button type="submit" :disabled="success || loading" class="py-3 text-primary mt-6 mx-auto w-full flex items-center justify-center">
         <span v-if="!loading && !success" class="font-medium translate-y-[1px]">Envoyer</span>
         
         <img v-if="loading" id="loading" src="/icons/loading.svg" width="18" alt="Loading">
@@ -121,7 +121,7 @@ button {
   box-shadow: 6px 6px 0px 0 rgba(0, 0, 0, 0.2);
   background-color: var(--secondary);
   transition: .1s all linear;
-  font-family: 'WorkSans', sans-serif;
+  font-family: 'Lora', serif;
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 600;
@@ -133,7 +133,7 @@ button:not(:disabled):hover {
 }
 
 textarea {
-  font-family: 'WorkSans', sans-serif;
+  font-family: 'Lora', serif;
 }
 
 #loading {

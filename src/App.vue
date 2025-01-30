@@ -24,7 +24,7 @@ const projects = ref([
   {
     id: 'ttg',
     type: ProjectType.PRO,
-    title: 'Book a visit - Taittinger',
+    title: 'Taittinger, Book a visit',
     description: 'Site web de réservation en ligne.',
     link: 'https://book-a-visit.taittinger.fr/',
     images: ['/projects/ttg_1.png', '/projects/ttg_2.png', '/projects/ttg_3.png', '/projects/ttg_4.png'],
@@ -52,7 +52,7 @@ const projects = ref([
   {
     id: 'alchimie',
     type: ProjectType.PRO,
-    title: 'Baccarat - Alchimie',
+    title: 'Baccarat, Alchimie',
     description: 'Développement d\'un thème Wordpress.',
     link: 'https://baccarat-heritage.com/fr/alchimie/',
     images: ['/projects/baccarat_alchimie_1.png', '/projects/baccarat_alchimie_2.png', '/projects/baccarat_alchimie_3.png'],
@@ -66,7 +66,7 @@ const projects = ref([
   {
     id: 'viking',
     type: ProjectType.PRO,
-    title: 'Viking - Cités Immersives',
+    title: 'Viking, Cités Immersives',
     description: 'Développement d\'un thème Wordpress.',
     link: 'https://viking.cites-immersives.fr/fr',
     images: ['/projects/viking_1.png', '/projects/viking_2.png', '/projects/viking_3.png'],
@@ -115,17 +115,17 @@ const projects = ref([
   //     { name: 'GDScript', icon: '/icons/others/godotengine.svg' }
   //   ],
   // },
-  {
-    id: 'shaders',
-    type: ProjectType.PERSO,
-    title: 'Shaders',
-    description: 'Un peu d\'imagination et de maths avec les shaders.',
-    link: 'https://www.shadertoy.com/user/tomdelie',
-    images: ['/projects/snowflake.png'],
-    tags: [
-      { name: 'GLSL', icon: '/icons/others/opengl.svg' }
-    ],
-  },
+  // {
+  //   id: 'shaders',
+  //   type: ProjectType.PERSO,
+  //   title: 'Shaders',
+  //   description: 'Un peu d\'imagination et de maths avec les shaders.',
+  //   link: 'https://www.shadertoy.com/user/tomdelie',
+  //   images: ['/projects/snowflake.png'],
+  //   tags: [
+  //     { name: 'GLSL', icon: '/icons/others/opengl.svg' }
+  //   ],
+  // },
 ]);
 const projectSelected = ref();
 
@@ -226,11 +226,11 @@ function animateFollower() {
     <LettrineCorner />
   </div>
 
-  <div class="container w-full px-2 lg:px-0 lg:w-4/5 mx-auto">
+  <div>
     <Hello class="h-full" />
 
-    <section class="projects mb-48 mt-48 flex flex-col items-center">
-      <h2 class="text-3xl lg:text-4xl font-bold mb-8"><b class="text-4xl lg:text-5xl">P</b>rojets</h2>
+    <section class="container projects py-24 flex flex-col items-center">
+      <h2 id="projects" class="text-3xl lg:text-5xl font-bold mb-16 uppercase">I. Projets</h2>
 
       <ul class="flex mb-8 select-none text-sm font-medium">
         <li class="px-3 py-1.5 border-secondary border cursor-pointer" :class="[selectedType === 0 ? 'bg-secondary text-primary' : 'bg-primary text-secondary hover:bg-tertiary hover:text-primary hover:border-tertiary duration-200']" @click="selectedType = 0">
@@ -254,8 +254,8 @@ function animateFollower() {
       </div>
     </section>
 
-    <section class="skills mb-48 flex flex-col items-center">
-      <h2 class="text-3xl lg:text-4xl font-bold mb-16"><b class="text-4xl lg:text-5xl">C</b>ompétences</h2>
+    <section class="skills py-24 container flex flex-col items-center">
+      <h2 id="skills" class="text-3xl lg:text-5xl font-bold mb-16 uppercase">II. Compétences</h2>
       <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-12">
         <div>
           <h3 class="font-semibold text-lg mb-2">JavaScript</h3>
@@ -295,12 +295,12 @@ function animateFollower() {
       </div>
     </section>
 
-    <Contact class="mb-48" />
+    <Contact class="py-24" />
   </div>
 
   <footer class="bg-secondary text-primary h-48 flex items-center justify-center">
     <div>
-      <p class="mb-3 text-center text-sm">Développé par Tom Délié</p>
+      <p class="mb-3 text-center text-sm font-medium">Développé par Tom Délié</p>
       <div class="flex items-center justify-center">
         <a class="group flex items-center mr-6" href="https://github.com/tomdelie" target="_blank">
           <GitHub class="text-primary group-hover:text-tertiary duration-100 w-[16px]" />

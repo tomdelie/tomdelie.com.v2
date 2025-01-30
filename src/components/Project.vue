@@ -43,7 +43,8 @@ onMounted(() => {
 
 <template>
   <div class="project flex flex-col">
-    <div class="relative">
+    <h3 class="text-lg font-bold uppercase text-secondary mb-1">{{ title }}</h3>
+    <div class="relative border-2 border-secondary">
       <swiper-container :class="`swiper${id}`" :init="false" navigation="true" pagination-dynamic-bullets="true">
         <swiper-slide @click="$emit('sliderclick')" class="cursor-pointer follower-trigger" v-for="image of images"><img height="200" class="relative" :src="image" :alt="`Image ${title}`"></swiper-slide>
       </swiper-container>
@@ -54,13 +55,15 @@ onMounted(() => {
         <img src="/icons/arrow-simple.svg" alt="Arrow right">
       </div>
     </div>
-    <div class="px-4 py-3 bg-secondary relative h-full">
-      <a v-if="link" target="_blank" :href="link"><OpenInNew class="absolute top-4 right-4" /></a>
-      <h3 class="text-lg font-bold">{{ title }}</h3>
-      <p class="mb-4 mt-2">{{ description }}</p>
+
+    <div class="mt-1 text-secondary relative h-full">
+      <a v-if="link" target="_blank" :href="link"><OpenInNew class="absolute top-0 right-0" /></a>
+      
+      <p class="text-sm">{{ description }}</p>
+
       <div class="flex flex-wrap">
-        <div v-for="t of tags" :key="t.name" class="flex items-center bg-primary text-sm text-secondary px-1 mb-1.5 py-0.5 mr-1.5">
-          <img class="w-[16px] h-[16px] mr-1" :src="t.icon" alt="Icon">
+        <div v-for="t of tags" :key="t.name" class="flex items-center bg-primary text-sm text-secondary mb-1.5 py-0.5 mr-3">
+          <img class="w-[12px] h-[12px] mr-1" :src="t.icon" alt="Icon">
           <span class="font-medium">{{ t.name }}</span>
         </div>
       </div>
@@ -78,8 +81,6 @@ onMounted(() => {
 }
 
 .project {
-  border: 2px solid var(--secondary);
-  box-shadow: 8px 8px 0px 0 rgba(0, 0, 0, 0.2);
   display: flex;
   overflow: hidden;
   color: var(--primary);

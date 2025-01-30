@@ -2,6 +2,12 @@
 export default {
   content: ["./src/**/*.{html,js,vue}"],
   theme: {
+    container: {
+      padding: {
+        DEFAULT: '1rem',
+      },
+      center: true,
+    },
     extend: {
       colors: {
         primary: '#EDE0D4',
