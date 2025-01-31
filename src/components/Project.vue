@@ -12,7 +12,12 @@ const props = defineProps({
   index: { type: Number, required: true },
 });
 
-// TODO: en fonction de l'index, appliquer une scale(1, 1) scale(-1, 1) scale(1, -1) scale(-1, -1) sur le cadre et le mask
+const scale = () => {
+  const i = props.index;
+  const x = i%2 ? -1 : 1;
+  const y = i%4>=2 ? -1 : 1;
+  return `scale-x-[${x}] scale-y-[${y}]`;
+}
 
 onMounted(() => {
   const params = {
@@ -48,9 +53,9 @@ onMounted(() => {
   <div class="project flex flex-col">
     <h3 class="text-lg font-bold uppercase text-secondary mb-1">{{ title }}</h3>
     <div class="flex-shrink-0 relative" title="Agrandir">
-      <div class="mask w-full h-full">
+      <div :class="`mask mask-${index%4} w-full h-full`">
         <swiper-container :class="`swiper${id}`" :init="false" navigation="true" pagination-dynamic-bullets="true">
-          <swiper-slide @click="$emit('sliderclick')" class="cursor-pointer follower-trigger" v-for="image of images"><img height="200" class="relative" :src="image" :alt="`Image ${title}`"></swiper-slide>
+          <swiper-slide @click="$emit('sliderclick')" class="cursor-zoom-in follower-trigger" v-for="image of images"><img height="200" class="relative" :src="image" :alt="`Image ${title}`"></swiper-slide>
         </swiper-container>
         <div :class="`absolute select-none top-1/2 left-3 -translate-y-1/2 simple-swiper-prev-${id} z-30 bg-primary bg-opacity-50 rounded-full w-[30px] h-[30px] flex items-center justify-center border-secondary border brightness-150`">
           <img class="-scale-100" src="/icons/arrow-simple.svg" alt="Arrow left">
@@ -59,7 +64,7 @@ onMounted(() => {
           <img class="-scale-1" src="/icons/arrow-simple.svg" alt="Arrow right">
         </div>
       </div>
-      <img class="pointer-events-none absolute w-full h-full top-0 left-0 transform" src="/line_frame.png" alt="">
+      <img :class="`pointer-events-none absolute w-full h-full top-0 left-0 ${scale()}`" :src="`/frame.png`" alt="">
     </div>
 
     <div class="mt-1 text-secondary relative h-full">
@@ -87,10 +92,22 @@ onMounted(() => {
 }
 
 .project .mask {
-  mask-image: url('/frame_mask.png');
+  mask-image: url('/frame-mask-0.png');
   mask-size: contain;
   mask-position: center;
   mask-repeat: no-repeat;
   background-color: var(--secondary);
+}
+
+.project .mask.mask-1 {
+  mask-image: url('/frame-mask-1.png');
+}
+
+.project .mask.mask-2 {
+  mask-image: url('/frame-mask-2.png');
+}
+
+.project .mask.mask-3 {
+  mask-image: url('/frame-mask-3.png');
 }
 </style>
