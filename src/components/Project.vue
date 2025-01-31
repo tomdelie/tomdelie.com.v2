@@ -12,6 +12,8 @@ const props = defineProps({
   index: { type: Number, required: true },
 });
 
+// comment needed to generate tailwind classes
+// scale-x-[1] scale-x-[-1] scale-y-[1] scale-y-[-1]
 const scale = () => {
   const i = props.index;
   const x = i%2 ? -1 : 1;
