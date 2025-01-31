@@ -1,27 +1,11 @@
 <template>
-  <svg id="open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-    <g>
-      <path fill="currentColor" d="M96,0v416h416V0H96z M472,376H136V40h336V376z"/>
-      <polygon fill="currentColor" points="40,472 40,296 40,136 40,96 0,96 0,512 416,512 416,472 376,472 	"/>
-      <polygon fill="currentColor" points="232.812,312.829 350.671,194.969 350.671,279.766 390.671,279.766 390.671,126.688 237.594,126.688 
-        237.594,166.688 322.39,166.688 204.531,284.547 	"/>
-    </g>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    <path fill="currentColor" d="M96,0v416h416V0H96z M472,376H136V40h336V376z"/>
+    <polygon fill="currentColor" points="40,472 40,296 40,136 40,96 0,96 0,512 416,512 416,472 376,472 	"/>
+    <polygon fill="currentColor" points="232.812,312.829 350.671,194.969 350.671,279.766 390.671,279.766 390.671,126.688 237.594,126.688 
+      237.594,166.688 322.39,166.688 204.531,284.547 	"/>
   </svg>
 </template>
 
 <style scoped>
-#open {
-  width: 20px;
-  height: 20px;
-}
-
-#open path, #open polygon {
-  fill: var(--primary);
-  transition: .1s all linear;
-}
-
-#open:hover path, #open:hover polygon {
-  transition: .1s all linear;
-  fill: var(--tertiary);
-}
 </style>

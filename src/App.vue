@@ -7,7 +7,6 @@ import Skill from './components/Skill.vue';
 import GitHub from './components/GitHub.vue';
 import Linkedin from './components/Linkedin.vue';
 import Malt from './components/Malt.vue';
-import Lettrine from './components/Lettrine.vue';
 import LettrineCorner from './components/LettrineCorner.vue';
 import Contact from './components/Contact.vue';
 import { ref, onMounted } from 'vue';
@@ -19,7 +18,6 @@ enum ProjectType {
 
 const loaded = ref(false);
 const filter = ref();
-const cursorFollower = ref();
 const projects = ref([
   {
     id: 'ttg',
@@ -165,60 +163,14 @@ onMounted(() => {
   setTimeout(() => {
     loaded.value = true;
   }, 2000);
-
-  animateFollower();
-
-  document.querySelectorAll('.follower-trigger').forEach((trigger) => {
-    trigger.addEventListener('mouseenter', () => {
-      if (window.innerWidth < 1024) return;
-      cursorFollower.value.classList.remove('scale-0');
-      cursorFollower.value.classList.add('scale-100');
-    });
-
-    trigger.addEventListener('mouseleave', () => {
-      if (window.innerWidth < 1024) return;
-      cursorFollower.value.classList.remove('scale-100');
-      cursorFollower.value.classList.add('scale-0');
-    });
-  });
 });
 
-// CURSOR FOLLOWER
-const mouse = {
-  x: 0,
-  y: 0,
-};
-document.addEventListener('mousemove', (event) => {
-  mouse.x = event.clientX + 10;
-  mouse.y = event.clientY + 10;
-});
-
-function animateFollower() {
-  const deltaX = (mouse.x - cursorFollower.value.offsetLeft) * 0.1;
-  const deltaY = (mouse.y - cursorFollower.value.offsetTop) * 0.1;
-
-  cursorFollower.value.style.left = `${cursorFollower.value.offsetLeft + deltaX}px`;
-  cursorFollower.value.style.top = `${cursorFollower.value.offsetTop + deltaY}px`;
-
-  requestAnimationFrame(animateFollower);
-}
 </script>
 
 <template>
   <Transition>
     <Loader v-if="!loaded" transition="fade" />
   </Transition>
-
-  <div ref="cursorFollower" class="pointer-events-none select-none fixed w-[80px] h-[80px] z-[1000] rounded-full overflow-hidden shadow transition-transform scale-0 duration-300">
-    <div class="border uppercase border-secondary rounded-full w-full h-full bg-blur bg-blur-full flex items-center justify-center text-secondary font-medium text-sm tracking-[0.15em]">
-      Voir
-    </div>
-  </div>
-
-  <header class="absolute top-0 left-0 right-0 w-full flex items-center justify-between">
-    <Lettrine class="w-[80px] lg:w-[100px] mt-3 ml-3 lg:ml-6 lg:mt-6" />
-    <div></div>
-  </header>
 
   <ProjectModal class="project-modal" @close="onProjectClose" v-if="projectSelected" :project="projectSelected" />
 
@@ -246,10 +198,11 @@ function animateFollower() {
 
       <div class="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-12">
         <Project 
-          v-for="p in projects" :key="p.id"
+          v-for="(p, i) in projects" :key="p.id"
           @sliderclick="onProjectClick(p.id)"
           v-show="selectedType === p.type || selectedType === 0"
           :id="p.id" :images="p.images" :title="p.title" :link="p.link" :description="p.description" :tags="p.tags"
+          :index="i"
         />
       </div>
     </section>
