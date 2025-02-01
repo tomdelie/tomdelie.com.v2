@@ -81,7 +81,7 @@ onMounted(() => {
 
 <template>
   <section class="text-center container">
-    <h2 id="contact" class="text-3xl lg:text-5xl font-bold mb-16 uppercase">III. Contact</h2>
+    <h2 id="contact" class="pt-24 text-3xl lg:text-5xl font-bold mb-16 uppercase">III. Contact</h2>
     <p class="mt-3">
       Vous voulez en savoir plus ? Parler de votre projet ?<br>
       Envoyez-moi un message et discutons-en.

@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import Loader from './components/Loader.vue';
 import Hello from './components/Hello.vue';
 import Project from './components/Project.vue';
 import ProjectModal from './components/ProjectModal.vue';
@@ -7,7 +6,6 @@ import Skill from './components/Skill.vue';
 import GitHub from './components/GitHub.vue';
 import Linkedin from './components/Linkedin.vue';
 import Malt from './components/Malt.vue';
-import LettrineCorner from './components/LettrineCorner.vue';
 import Contact from './components/Contact.vue';
 import { ref, onMounted } from 'vue';
 
@@ -163,26 +161,21 @@ onMounted(() => {
   setTimeout(() => {
     loaded.value = true;
   }, 2000);
+
+  ScrollReveal().reveal('.name');
+  ScrollReveal().reveal('.project', { delay: 150, reset: true });
 });
 
 </script>
 
 <template>
-  <Transition>
-    <Loader v-if="!loaded" transition="fade" />
-  </Transition>
-
   <ProjectModal class="project-modal" @close="onProjectClose" v-if="projectSelected" :project="projectSelected" />
-
-  <div class="absolute top-3 right-3 lg:top-12 lg:right-12">
-    <LettrineCorner />
-  </div>
 
   <div>
     <Hello class="h-full" />
 
-    <section class="container projects py-24 flex flex-col items-center">
-      <h2 id="projects" class="text-3xl lg:text-5xl font-bold mb-16 uppercase">I. Projets</h2>
+    <section class="container projects pb-24 flex flex-col items-center">
+      <h2 id="projects" class="pt-24 text-3xl lg:text-5xl font-bold mb-16 uppercase">I. Projets</h2>
 
       <ul class="flex mb-8 select-none text-sm font-medium">
         <li class="px-3 py-1.5 border-secondary border cursor-pointer" :class="[selectedType === 0 ? 'bg-secondary text-primary' : 'bg-primary text-secondary hover:bg-tertiary hover:text-primary hover:border-tertiary duration-200']" @click="selectedType = 0">
@@ -198,17 +191,16 @@ onMounted(() => {
 
       <div class="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-12">
         <Project 
-          v-for="(p, i) in projects" :key="p.id"
+          v-for="(p, i) in projects.filter((p) => p.type === selectedType || selectedType === 0)" :key="p.id"
           @sliderclick="onProjectClick(p.id)"
-          v-show="selectedType === p.type || selectedType === 0"
           :id="p.id" :images="p.images" :title="p.title" :link="p.link" :description="p.description" :tags="p.tags"
           :index="i"
         />
       </div>
     </section>
 
-    <section class="skills py-24 container flex flex-col items-center">
-      <h2 id="skills" class="text-3xl lg:text-5xl font-bold mb-16 uppercase">II. Compétences</h2>
+    <section class="skills pb-24 container flex flex-col items-center">
+      <h2 id="skills" class="pt-24 text-3xl lg:text-5xl font-bold mb-16 uppercase">II. Compétences</h2>
       <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-12">
         <div>
           <h3 class="font-semibold text-lg mb-2">JavaScript</h3>
@@ -248,7 +240,7 @@ onMounted(() => {
       </div>
     </section>
 
-    <Contact class="py-24" />
+    <Contact class="pb-24" />
   </div>
 
   <footer class="bg-secondary text-primary h-48 flex items-center justify-center">

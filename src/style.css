@@ -3,9 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --primary: #EDE0D4;
+  --primary: #F8E7D5;
   --secondary: #482B25;
   --tertiary: #ED1C24;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 html, body {
@@ -48,56 +52,6 @@ html, body {
 
 @font-face {
   font-family: 'Lora';
-  src: url('/fonts/Lora/Lora-Regular.ttf');
-  font-weight: 400;
+  src: url('/fonts/LoraVariable.ttf');
   font-style: normal;
-}
-
-@font-face {
-  font-family: 'Lora';
-  src: url('/fonts/Lora/Lora-Italic.ttf');
-  font-weight: 400;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Lora';
-  src: url('/fonts/Lora/Lora-Medium.ttf');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Lora';
-  src: url('/fonts/Lora/Lora-MediumItalic.ttf');
-  font-weight: 500;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Lora';
-  src: url('/fonts/Lora/Lora-SemiBold.ttf');
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Lora';
-  src: url('/fonts/Lora/Lora-SemiBoldItalic.ttf');
-  font-weight: 600;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Lora';
-  src: url('/fonts/Lora/Lora-Bold.ttf');
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Lora';
-  src: url('/fonts/Lora/Lora-BoldItalic.ttf');
-  font-weight: 700;
-  font-style: italic;
 }

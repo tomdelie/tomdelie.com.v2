@@ -1,13 +1,17 @@
 <script setup lang="ts">
+import { onMounted } from 'vue';
 import Lettrine from './Lettrine.vue';
+import LettrineCorner from './LettrineCorner.vue';
 </script>
 
 <template>
-  <section class="hi text-center flex flex-col align-center justify-center">
-    <h1 class="text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl font-bold text-secondary flex items-center sm:items-baseline uppercase mb-1 px-4 flex-col justify-center sm:flex-row">
+  <section class="hi relative text-center flex flex-col align-center justify-center">
+    <LettrineCorner class="w-[160px] sm:w-[200px] lg:w-[280px] absolute top-2 right-2 sm:top-4 sm:right-4" />
+
+    <h1 class="name text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl font-bold text-secondary flex items-center sm:items-baseline uppercase mb-1 px-4 flex-col justify-center sm:flex-row">
       <div class="relative flex justify-center items-baseline mr-0 sm:mr-8">
         <Lettrine class="absolute w-[51px] md:w-[62px] lg:w-[83px] 2xl:w-[110px] left-[-5px] top-[-9px] md:left-[-7px] md:top-[-10px] lg:left-[-9px] lg:top-[-13px] 2xl:left-[-12px] 2xl:top-[-17px]" />
-        <div><span class="text-primary">T</span>om</div>
+        <span class="ml-[2.5rem] md:ml-[3rem] lg:ml-[4rem] 2xl:ml-[5.5rem]">om</span>
       </div>
       <div>Délié</div>
     </h1>
@@ -35,8 +39,8 @@ import Lettrine from './Lettrine.vue';
 .transition {
   position: absolute;
   bottom: 0;
-  transform: translateY(50%);
-  left: 48%;
+  transform: translate(-50%, 50%);
+  left: 50%;
   user-select: none;
   pointer-events: none;
 }
