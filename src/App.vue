@@ -173,9 +173,9 @@ onMounted(() => {
 
   <div>
     <Hello class="h-full" />
-
+    
     <section class="container projects pb-24 flex flex-col items-center">
-      <h2 id="projects" class="pt-24 text-3xl lg:text-5xl font-bold mb-16 uppercase">I. Projets</h2>
+      <h2 id="projects" class="pt-24 text-3xl lg:text-5xl font-bold mb-16 heavy-rain-text"><span class="heavy-rain font-normal text-4xl lg:text-6xl">P</span>rojets</h2>
 
       <ul class="flex mb-8 select-none text-sm font-medium">
         <li class="px-3 py-1.5 border-secondary border cursor-pointer" :class="[selectedType === 0 ? 'bg-secondary text-primary' : 'bg-primary text-secondary hover:bg-tertiary hover:text-primary hover:border-tertiary duration-200']" @click="selectedType = 0">
@@ -200,10 +200,10 @@ onMounted(() => {
     </section>
 
     <section class="skills pb-24 container flex flex-col items-center">
-      <h2 id="skills" class="pt-24 text-3xl lg:text-5xl font-bold mb-16 uppercase">II. Compétences</h2>
+      <h2 id="skills" class="pt-24 text-3xl lg:text-5xl font-bold mb-16 heavy-rain-text"><span class="heavy-rain font-normal text-4xl lg:text-6xl">C</span>ompétences</h2>
       <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-12">
         <div>
-          <h3 class="font-semibold text-lg mb-2">JavaScript</h3>
+          <h3 class="font-semibold text-sm lg:text-base mb-2 heavy-rain-text">JavaScript</h3>
           <Skill :level="3" title="TypeScript" image="/icons/javascript/typescript.svg" :isFavorite="true" />
           <Skill :level="3" title="Vue.js" image="/icons/javascript/vuejs.svg" :isFavorite="true" />
           <Skill :level="3" title="Node.js" image="/icons/javascript/nodejs.svg" :isFavorite="true" />
@@ -214,7 +214,7 @@ onMounted(() => {
           <Skill :level="1" title="React" image="/icons/javascript/react.svg" />
         </div>
         <div>
-          <h3 class="font-semibold text-lg mb-2">Automatisation</h3>
+          <h3 class="font-semibold text-sm lg:text-base mb-2 heavy-rain-text">Automatisation</h3>
           <Skill :level="3" title="Docker" image="/icons/automation/docker.svg" :isFavorite="true" />
           <Skill :level="3" title="Github Actions" image="/icons/automation/githubactions.svg" />
           <Skill :level="1" title="Terraform" image="/icons/automation/terraform.svg" />
@@ -223,7 +223,7 @@ onMounted(() => {
         </div>
 
         <div>
-          <h3 class="font-semibold text-lg mb-2">PHP</h3>
+          <h3 class="font-semibold text-sm lg:text-base mb-2 heavy-rain-text">PHP</h3>
           <Skill :level="2" title="PHP" image="/icons/php/php.svg" />
           <Skill :level="2" title="Laravel" image="/icons/php/laravel.svg" />
           <Skill :level="2" title="Wordpress" image="/icons/php/wordpress.svg" />
@@ -231,7 +231,7 @@ onMounted(() => {
         </div>
 
         <div>
-          <h3 class="font-semibold text-lg mb-2">Autres</h3>
+          <h3 class="font-semibold text-sm lg:text-base mb-2 heavy-rain-text">Autres</h3>
           <Skill :level="3" title="TailwindCSS" image="/icons/others/tailwindcss.svg" :isFavorite="true" />
           <Skill :level="2" title="Godot Engine" image="/icons/others/godotengine.svg" :isFavorite="true" />
           <Skill :level="2" title="Figma" image="/icons/others/figma.svg" />
@@ -243,7 +243,7 @@ onMounted(() => {
     <Contact class="pb-24" />
   </div>
 
-  <footer class="bg-secondary text-primary h-48 flex items-center justify-center">
+  <footer class="mt-64 bg-secondary text-primary h-48 flex items-center justify-center">
     <div>
       <p class="mb-3 text-center text-sm font-medium">Développé par Tom Délié</p>
       <div class="flex items-center justify-center">

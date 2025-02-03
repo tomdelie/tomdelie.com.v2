@@ -22,6 +22,14 @@ html, body {
   font-family: 'Lora';
 }
 
+.heavy-rain {
+  font-family: 'HeavyRain';
+}
+
+.heavy-rain-text {
+  font-family: 'HeavyRainText';
+}
+
 :focus-visible {
   outline-style: dashed;
   outline-color: var(--tertiary);
@@ -53,5 +61,17 @@ html, body {
 @font-face {
   font-family: 'Lora';
   src: url('/fonts/LoraVariable.ttf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HeavyRain';
+  src: url('/fonts/HeavyRain.ttf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HeavyRainText';
+  src: url('/fonts/HeavyRainText.ttf');
   font-style: normal;
 }

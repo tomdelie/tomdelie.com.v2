@@ -53,7 +53,7 @@ onMounted(() => {
 
 <template>
   <div class="project flex flex-col">
-    <h3 class="text-lg font-bold uppercase text-secondary mb-1">{{ title }}</h3>
+    <h3 class="text-sm lg:text-base font-bold uppercase text-secondary mb-1 heavy-rain-text">{{ title }}</h3>
     <div class="flex-shrink-0 relative" title="Agrandir">
       <div :class="`mask mask-${index%4} w-full h-full`">
         <swiper-container :class="`swiper${id}`" :init="false" navigation="true" pagination-dynamic-bullets="true">
