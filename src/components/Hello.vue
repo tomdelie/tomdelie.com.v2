@@ -18,10 +18,10 @@ import LettrineCorner from './LettrineCorner.vue';
       </div>
     </h1>
 
-    <h3 class="pr-[0.65rem] md:mr-[-0.85rem] lg:mr-[-1.2rem] 2xl:mr-[-2rem] text-sm md:text-md lg:text-lg 2xl:text-xl font-medium uppercase mb-16 px-4 tracking-[0.21em] md:tracking-[0.37em] lg:tracking-[0.41em] 2xl:tracking-[0.615em] flex flex-col justify-center sm:flex-row">
-      <span class="md:mr-3.5 lg:mr-4 2xl:mr-6">Développeur</span>
-      <span class="md:mr-3.5 lg:mr-4 2xl:mr-6">JavaScript</span>
-      <span class="md:mr-3.5 lg:mr-4 2xl:mr-6">FullStack</span>
+    <h3 class="ml-0 sm:ml-2.5 text-sm md:text-md lg:text-lg 2xl:text-xl font-medium uppercase mb-16 px-4 tracking-[0.2em] md:tracking-[0.37em] lg:tracking-[0.41em] 2xl:tracking-[0.61em] flex flex-col justify-center sm:flex-row">
+      <span class="pr-0 sm:pr-3.5 lg:pr-4 2xl:pr-6">Développeur</span>
+      <span class="pr-0 sm:pr-3.5 lg:pr-4 2xl:pr-6">JavaScript</span>
+      <span>FullStack</span>
     </h3>
 
     <div class="flex flex-col items-center text-sm lg:text-base">

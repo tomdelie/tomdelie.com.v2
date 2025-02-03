@@ -177,11 +177,11 @@ onMounted(() => {
     <section class="container projects pb-24 flex flex-col items-center">
       <h2 id="projects" class="pt-24 text-3xl lg:text-5xl font-bold mb-16 heavy-rain-text"><span class="heavy-rain font-normal text-4xl lg:text-6xl">P</span>rojets</h2>
 
-      <ul class="flex mb-8 select-none text-sm font-medium">
+      <ul class="flex flex-col sm:flex-row mb-8 select-none text-sm font-medium text-center">
         <li class="px-3 py-1.5 border-secondary border cursor-pointer" :class="[selectedType === 0 ? 'bg-secondary text-primary' : 'bg-primary text-secondary hover:bg-tertiary hover:text-primary hover:border-tertiary duration-200']" @click="selectedType = 0">
           <span class="font-medium">Tous</span>
         </li>
-        <li class="mx-3 px-3 py-1.5 border-secondary border cursor-pointer" :class="[selectedType === 1 ? 'bg-secondary text-primary' : 'bg-primary text-secondary hover:bg-tertiary hover:text-primary hover:border-tertiary duration-200']" @click="selectedType = 1">
+        <li class="my-3 sm:mx-3 sm:my-0 px-3 py-1.5 border-secondary border cursor-pointer" :class="[selectedType === 1 ? 'bg-secondary text-primary' : 'bg-primary text-secondary hover:bg-tertiary hover:text-primary hover:border-tertiary duration-200']" @click="selectedType = 1">
           <span class="font-medium">Professionnel</span>
         </li>
         <li class="px-3 py-1.5 border-secondary border cursor-pointer" :class="[selectedType === 2 ? 'bg-secondary text-primary' : 'bg-primary text-secondary hover:bg-tertiary hover:text-primary hover:border-tertiary duration-200']" @click="selectedType = 2">
