@@ -162,7 +162,14 @@ onMounted(() => {
     loaded.value = true;
   }, 2000);
 
-  ScrollReveal().reveal('.name');
+  ScrollReveal().reveal('.firstname', { delay: 1400, duration: 800 });
+  ScrollReveal().reveal('.lastname', { delay: 1500, duration: 1200 });
+  ScrollReveal().reveal('.job', { delay: 1800, duration: 1200 });
+  ScrollReveal().reveal('.flowers', { delay: 1900, duration: 2000 });
+  ScrollReveal().reveal('.chapter1', { delay: 2200, duration: 1400 });
+  ScrollReveal().reveal('.chapter2', { delay: 2300, duration: 1800 });
+  ScrollReveal().reveal('.chapter3', { delay: 2400, duration: 2200 });
+
   ScrollReveal().reveal('.project', { delay: 150, reset: true });
 });
 
@@ -243,7 +250,7 @@ onMounted(() => {
     <Contact class="pb-24" />
   </div>
 
-  <footer class="mt-64 bg-secondary text-primary h-48 flex items-center justify-center">
+  <footer class="mt-24 bg-secondary text-primary h-48 flex items-center justify-center">
     <div>
       <p class="mb-3 text-center text-sm font-medium">Développé par Tom Délié</p>
       <div class="flex items-center justify-center">
