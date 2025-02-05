@@ -57,7 +57,9 @@ onMounted(() => {
     <div class="flex-shrink-0 relative" title="Agrandir">
       <div :class="`mask mask-${index%4} w-full h-full`">
         <swiper-container :class="`swiper${id}`" :init="false" navigation="true" pagination-dynamic-bullets="true">
-          <swiper-slide @click="$emit('sliderclick')" class="cursor-zoom-in follower-trigger" v-for="image of images"><img height="200" class="relative" :src="image" :alt="`Image ${title}`"></swiper-slide>
+          <swiper-slide @click="$emit('sliderclick')" class="cursor-zoom-in follower-trigger" v-for="(image, i) of images">
+            <img :loading="i > 0 ? 'lazy' : 'eager'" height="200" class="relative" :src="image" :alt="`Image ${title}`">
+          </swiper-slide>
         </swiper-container>
         <div :class="`absolute select-none top-1/2 left-3 -translate-y-1/2 simple-swiper-prev-${id} z-30 bg-primary bg-opacity-50 rounded-full w-[30px] h-[30px] flex items-center justify-center border-secondary border brightness-150`">
           <img class="-scale-100" src="/icons/arrow-simple.svg" alt="Arrow left">
@@ -76,7 +78,7 @@ onMounted(() => {
 
       <div class="flex flex-wrap">
         <div v-for="t of tags" :key="t.name" class="flex items-center bg-primary text-sm text-secondary mb-1.5 py-0.5 mr-3">
-          <img class="w-[12px] h-[12px] mr-1 translate-y-[1px]" :src="t.icon" alt="Icon">
+          <img class="w-[12px] h-[12px] mr-1 translate-y-[1px]" loading="lazy" :src="t.icon" alt="Icon">
           <span>{{ t.name }}</span>
         </div>
       </div>

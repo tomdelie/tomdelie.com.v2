@@ -81,10 +81,10 @@ onMounted(() => {
 
 <template>
   <section class="text-center container">
-    <h2 id="contact" class="pt-24 text-3xl lg:text-5xl font-bold mb-16 heavy-rain-text"><span class="heavy-rain font-normal text-4xl lg:text-6xl">C</span>ontact</h2>
+    <h2 id="contact" class="pt-24 text-3xl lg:text-5xl font-bold mb-16 heavy-rain-text"><span class="heavy-rain font-normal text-4xl lg:text-6xl">{{ $t('contact.title_initial') }}</span>{{ $t('contact.title') }}</h2>
     <p class="mt-3">
-      Vous voulez en savoir plus ? Parler de votre projet ?<br>
-      Envoyez-moi un message et discutons-en.
+      {{ $t('contact.para.1') }}<br>
+      {{ $t('contact.para.2') }}
     </p>
 
     <form ref="contactForm" class="gform mt-6 flex flex-col max-w-[400px] w-full mx-auto" action="https://script.google.com/macros/s/AKfycbwwd9_5K6qq-q6x0N_RAajar6WDqGEbw01tD8aLfqTRpixiGRPndQDrxRj_1w-Ce6uo/exec" method="POST">
@@ -92,25 +92,25 @@ onMounted(() => {
       <input class="form-hp" v-model="honeypot.phone" autocomplete="off" type="text" tabindex="-1" name="phone" />
 
       <div class="flex flex-col items-start mb-5">
-        <label class="text-sm mb-1" for="oazdjkazdojve">Email</label>
+        <label class="text-sm mb-1" for="oazdjkazdojve">{{ $t('contact.form.email') }}</label>
         <input class="px-3 py-1.5 border border-secondary bg-primary placeholder:text-secondary placeholder:opacity-70 text-sm w-full" v-model="form.email" :disabled="success || loading" required type="email" name="oazdjkazdojve" placeholder="contact@email.com" />
       </div>
       
       <div class="flex flex-col items-start">
-        <label class="text-sm mb-1" for="oazdjkazdojve">Message</label>
-        <textarea class="w-full p-3 border border-secondary bg-primary placeholder:text-secondary placeholder:opacity-70 text-sm min-h-[100px] max-h-[400px]" v-model="form.message" :disabled="success || loading" required rows="6" name="kqsdoiazcnize" placeholder="Bonjour,"></textarea>
+        <label class="text-sm mb-1" for="oazdjkazdojve">{{ $t('contact.form.message') }}</label>
+        <textarea class="w-full p-3 border border-secondary bg-primary placeholder:text-secondary placeholder:opacity-70 text-sm min-h-[100px] max-h-[400px]" v-model="form.message" :disabled="success || loading" required rows="6" name="kqsdoiazcnize" :placeholder="$t('contact.placeholder')"></textarea>
       </div>
 
       <button type="submit" :disabled="success || loading" class="py-3 text-primary mt-6 mx-auto w-full flex items-center justify-center">
-        <span v-if="!loading && !success" class="font-medium translate-y-[1px]">Envoyer</span>
+        <span v-if="!loading && !success" class="font-medium translate-y-[1px]">{{ $t('contact.button') }}</span>
         
         <img v-if="loading" id="loading" src="/icons/loading.svg" width="18" alt="Loading">
 
         <img v-if="success" class="mr-2" id="validate" src="/icons/validate.svg" width="18" alt="Validate">
-        <span v-if="success" class="font-medium">Envoyé</span>
+        <span v-if="success" class="font-medium">{{ $t('contact.sent') }}</span>
       </button>
-      <span v-if="error" class="text-sm text-tertiary font-medium mt-3">Oops ! Une erreur s'est produite, veuillez réessayer.</span>
-      <span v-if="!error && rateLimited" class="text-sm text-tertiary font-medium mt-3">Veuillez attendre quelques minutes avant de soumettre le formulaire de nouveau.</span>
+      <span v-if="error" class="text-sm text-tertiary font-medium mt-3">{{ $t('contact.error') }}</span>
+      <span v-if="!error && rateLimited" class="text-sm text-tertiary font-medium mt-3">{{ $t('contact.rateLimited') }}</span>
     </form>
 
   </section>

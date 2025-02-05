@@ -1,0 +1,55 @@
+{
+  "hello": {
+    "job": {
+      "1": "Développeur",
+      "2": "JavaScript",
+      "3": "FullStack"
+    },
+    "chapter": {
+      "1": "voir mes projets",
+      "2": "mes compétences",
+      "3": "me contacter"
+    }
+  },
+  "projects": {
+    "title_initial": "P",
+    "title": "rojets",
+    "filters": {
+      "all": "Tous",
+      "pro": "Professionnel",
+      "fun": "Personnel"
+    },
+    "taittinger": "Site web de réservation en ligne.",
+    "eatic": "Application web et mobile de livraison de repas.",
+    "alchimie": "Développement d'un thème Wordpress.",
+    "viking": "Développement d'un thème Wordpress.",
+    "photocinelive": "Développement d'un thème Wordpress.",
+    "pixel": "Développement d'un jeu de plateforme en 2D."
+  },
+  "skills": {
+    "title_initial": "C",
+    "title": "ompétences",
+    "automation": "Automatisation",
+    "others": "Autres"
+  },
+  "contact": {
+    "title_initial": "C",
+    "title": "ontact",
+    "para": {
+      "1": "Vous voulez en savoir plus ? Parler de votre projet ?",
+      "2": "Envoyez-moi un message et discutons-en."
+    },
+    "form": {
+      "email": "Email",
+      "message": "Message"
+    },
+    "placeholder": "Bonjour, ...",
+    "button": "Envoyer",
+    "sent": "Envoyé",
+    "error": "Oops ! Une erreur s'est produite, veuillez réessayer.",
+    "rateLimited": "Veuillez attendre quelques minutes avant de soumettre le formulaire de nouveau."
+  },
+  "footer": {
+    "developed": "Développé par Tom Délié"
+  }
+}

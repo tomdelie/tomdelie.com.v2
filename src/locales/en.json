@@ -1,0 +1,55 @@
+{
+  "hello": {
+    "job": {
+      "1": "FullStack",
+      "2": "JavaScript",
+      "3": "Developer"
+    },
+    "chapter": {
+      "1": "see my projects",
+      "2": "my skills",
+      "3": "contact me"
+    }
+  },
+  "projects": {
+    "title_initial": "P",
+    "title": "rojects",
+    "filters": {
+      "all": "All",
+      "pro": "Professional",
+      "fun": "Personal"
+    },
+    "taittinger": "Online booking website.",
+    "eatic": "Web and mobile meal delivery app.",
+    "alchimie": "Wordpress theme development.",
+    "viking": "Wordpress theme development.",
+    "photocinelive": "Wordpress theme development.",
+    "pixel": "2D platform game development."
+  },
+  "skills": {
+    "title_initial": "S",
+    "title": "kills",
+    "automation": "Automation",
+    "others": "Other"
+  },
+  "contact": {
+    "title_initial": "C",
+    "title": "ontact",
+    "para": {
+      "1": "Would you like to find out more? Talk about your project?",
+      "2": "Send me a message and let's talk about it."
+    },
+    "form": {
+      "email": "Email",
+      "message": "Message"
+    },
+    "placeholder": "Hello, ...",
+    "button": "Send",
+    "sent": "Sent",
+    "error": "Oops! An error has occurred, please try again.",
+    "rateLimited": "Please wait a few minutes before submitting the form again."
+  },
+  "footer": {
+    "developed": "Made by Tom Délié"
+  }
+}

@@ -18,8 +18,11 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "types": [
+      "@intlify/unplugin-vue-i18n/messages"
+    ]
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "src/assets/scrollreveal.js"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "public/js/scrollreveal.js"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

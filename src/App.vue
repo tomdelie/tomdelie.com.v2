@@ -8,11 +8,15 @@ import Linkedin from './components/Linkedin.vue';
 import Malt from './components/Malt.vue';
 import Contact from './components/Contact.vue';
 import { ref, onMounted } from 'vue';
+import ScrollReveal from 'scrollreveal';
+import { useI18n } from 'vue-i18n';
 
 enum ProjectType {
   PRO = 1,
   PERSO = 2
 }
+
+const { t } = useI18n();
 
 const loaded = ref(false);
 const filter = ref();
@@ -21,7 +25,7 @@ const projects = ref([
     id: 'ttg',
     type: ProjectType.PRO,
     title: 'Taittinger, Book a visit',
-    description: 'Site web de réservation en ligne.',
+    description: t('projects.taittinger'),
     link: 'https://book-a-visit.taittinger.fr/',
     images: ['/projects/ttg_1.png', '/projects/ttg_2.png', '/projects/ttg_3.png', '/projects/ttg_4.png'],
     tags: [
@@ -35,7 +39,7 @@ const projects = ref([
     id: 'eatic',
     type: ProjectType.PRO,
     title: 'Eatic',
-    description: 'Application web et mobile de livraison de repas.',
+    description: t('projects.eatic'),
     link: '',
     images: ['/projects/eatic.png'],
     tags: [
@@ -49,7 +53,7 @@ const projects = ref([
     id: 'alchimie',
     type: ProjectType.PRO,
     title: 'Baccarat, Alchimie',
-    description: 'Développement d\'un thème Wordpress.',
+    description: t('projects.alchimie'),
     link: 'https://baccarat-heritage.com/fr/alchimie/',
     images: ['/projects/baccarat_alchimie_1.png', '/projects/baccarat_alchimie_2.png', '/projects/baccarat_alchimie_3.png'],
     tags: [
@@ -63,7 +67,7 @@ const projects = ref([
     id: 'viking',
     type: ProjectType.PRO,
     title: 'Viking, Cités Immersives',
-    description: 'Développement d\'un thème Wordpress.',
+    description: t('projects.viking'),
     link: 'https://viking.cites-immersives.fr/fr',
     images: ['/projects/viking_1.png', '/projects/viking_2.png', '/projects/viking_3.png'],
     tags: [
@@ -77,7 +81,7 @@ const projects = ref([
     id: 'photocinelive',
     type: ProjectType.PRO,
     title: 'PhotoCineLive',
-    description: 'Développement d\'un thème Wordpress.',
+    description: t('projects.photocinelive'),
     link: 'https://photocinelive.com/fr',
     images: ['/projects/pcl_1.png', '/projects/pcl_2.png', '/projects/pcl_3.png', '/projects/pcl_4.png'],
     tags: [
@@ -91,7 +95,7 @@ const projects = ref([
     id: 'pixel',
     type: ProjectType.PERSO,
     title: 'Pixel World',
-    description: 'Développement d\'un jeu de plateforme en 2D.',
+    description: t('projects.pixel'),
     link: 'https://tomdelie.itch.io/pixel-world',
     images: ['/projects/pixel_world_1.png', '/projects/pixel_world_2.png', '/projects/pixel_world_3.png'],
     tags: [
@@ -182,17 +186,17 @@ onMounted(() => {
     <Hello class="h-full" />
     
     <section class="container projects pb-24 flex flex-col items-center">
-      <h2 id="projects" class="pt-24 text-3xl lg:text-5xl font-bold mb-16 heavy-rain-text"><span class="heavy-rain font-normal text-4xl lg:text-6xl">P</span>rojets</h2>
+      <h2 id="projects" class="pt-24 text-3xl lg:text-5xl font-bold mb-16 heavy-rain-text"><span class="heavy-rain font-normal text-4xl lg:text-6xl">{{ $t('projects.title_initial') }}</span>{{ $t('projects.title') }}</h2>
 
       <ul class="flex flex-col sm:flex-row mb-8 select-none text-sm font-medium text-center">
         <li class="px-3 py-1.5 border-secondary border cursor-pointer" :class="[selectedType === 0 ? 'bg-secondary text-primary' : 'bg-primary text-secondary hover:bg-tertiary hover:text-primary hover:border-tertiary duration-200']" @click="selectedType = 0">
-          <span class="font-medium">Tous</span>
+          <span class="font-medium">{{ $t('projects.filters.all') }}</span>
         </li>
         <li class="my-3 sm:mx-3 sm:my-0 px-3 py-1.5 border-secondary border cursor-pointer" :class="[selectedType === 1 ? 'bg-secondary text-primary' : 'bg-primary text-secondary hover:bg-tertiary hover:text-primary hover:border-tertiary duration-200']" @click="selectedType = 1">
-          <span class="font-medium">Professionnel</span>
+          <span class="font-medium">{{ $t('projects.filters.pro') }}</span>
         </li>
         <li class="px-3 py-1.5 border-secondary border cursor-pointer" :class="[selectedType === 2 ? 'bg-secondary text-primary' : 'bg-primary text-secondary hover:bg-tertiary hover:text-primary hover:border-tertiary duration-200']" @click="selectedType = 2">
-          <span class="font-medium">Personnel</span>
+          <span class="font-medium">{{ $t('projects.filters.fun') }}</span>
         </li>
       </ul>
 
@@ -207,7 +211,7 @@ onMounted(() => {
     </section>
 
     <section class="skills pb-24 container flex flex-col items-center">
-      <h2 id="skills" class="pt-24 text-3xl lg:text-5xl font-bold mb-16 heavy-rain-text"><span class="heavy-rain font-normal text-4xl lg:text-6xl">C</span>ompétences</h2>
+      <h2 id="skills" class="pt-24 text-3xl lg:text-5xl font-bold mb-16 heavy-rain-text"><span class="heavy-rain font-normal text-4xl lg:text-6xl">{{ $t('skills.title_initial') }}</span>{{ $t('skills.title') }}</h2>
       <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-12">
         <div>
           <h3 class="font-semibold text-sm lg:text-base mb-2 heavy-rain-text">JavaScript</h3>
@@ -221,7 +225,7 @@ onMounted(() => {
           <Skill :level="1" title="React" image="/icons/javascript/react.svg" />
         </div>
         <div>
-          <h3 class="font-semibold text-sm lg:text-base mb-2 heavy-rain-text">Automatisation</h3>
+          <h3 class="font-semibold text-sm lg:text-base mb-2 heavy-rain-text">{{ $t('skills.automation') }}</h3>
           <Skill :level="3" title="Docker" image="/icons/automation/docker.svg" :isFavorite="true" />
           <Skill :level="3" title="Github Actions" image="/icons/automation/githubactions.svg" />
           <Skill :level="1" title="Terraform" image="/icons/automation/terraform.svg" />
@@ -238,7 +242,7 @@ onMounted(() => {
         </div>
 
         <div>
-          <h3 class="font-semibold text-sm lg:text-base mb-2 heavy-rain-text">Autres</h3>
+          <h3 class="font-semibold text-sm lg:text-base mb-2 heavy-rain-text">{{ $t('skills.others') }}</h3>
           <Skill :level="3" title="TailwindCSS" image="/icons/others/tailwindcss.svg" :isFavorite="true" />
           <Skill :level="2" title="Godot Engine" image="/icons/others/godotengine.svg" :isFavorite="true" />
           <Skill :level="2" title="Figma" image="/icons/others/figma.svg" />
@@ -252,7 +256,7 @@ onMounted(() => {
 
   <footer class="mt-24 bg-secondary text-primary h-48 flex items-center justify-center">
     <div>
-      <p class="mb-3 text-center text-sm font-medium">Développé par Tom Délié</p>
+      <p class="mb-3 text-center text-sm font-medium">{{ $t('footer.developed') }}</p>
       <div class="flex items-center justify-center">
         <a class="group flex items-center mr-6" href="https://github.com/tomdelie" target="_blank">
           <GitHub class="text-primary group-hover:text-tertiary duration-100 w-[16px]" />

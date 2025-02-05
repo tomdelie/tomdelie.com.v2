@@ -1,6 +1,4 @@
 <script setup lang="ts">
-// import Lettrine from './Lettrine.vue';
-// import Pillar from './Pillar.vue';
 import LettrineCorner from './LettrineCorner.vue';
 </script>
 
@@ -24,15 +22,15 @@ import LettrineCorner from './LettrineCorner.vue';
     </div>
 
     <h3 class="job ml-0 sm:ml-2.5 text-sm md:text-md lg:text-lg 2xl:text-xl font-medium uppercase mb-16 px-4 tracking-[0.2em] md:tracking-[0.37em] lg:tracking-[0.41em] 2xl:tracking-[0.61em] flex flex-col justify-center sm:flex-row">
-      <span class="pr-0 sm:pr-3.5 lg:pr-4 2xl:pr-6">Développeur</span>
-      <span class="pr-0 sm:pr-3.5 lg:pr-4 2xl:pr-6">JavaScript</span>
-      <span>FullStack</span>
+      <span class="pr-0 sm:pr-3.5 lg:pr-4 2xl:pr-6">{{ $t('hello.job.1') }}</span>
+      <span class="pr-0 sm:pr-3.5 lg:pr-4 2xl:pr-6">{{ $t('hello.job.2') }}</span>
+      <span>{{ $t('hello.job.3') }}</span>
     </h3>
 
     <ul class="flex flex-col items-center text-sm lg:text-base">
-      <li class="chapter1"><a class="flex items-center text-secondary hover:text-tertiary duration-100 mb-2" href="#projects">I. voir mes projets</a></li>
-      <li class="chapter2"><a class="flex items-center text-secondary hover:text-tertiary duration-100 mb-2" href="#skills">II. mes compétences</a></li>
-      <li class="chapter3"><a class="flex items-center text-secondary hover:text-tertiary duration-100" href="#contact">III. me contacter</a></li>
+      <li class="chapter1"><a class="flex items-center text-secondary hover:text-tertiary duration-100 mb-2" href="#projects">I. {{ $t('hello.chapter.1') }}</a></li>
+      <li class="chapter2"><a class="flex items-center text-secondary hover:text-tertiary duration-100 mb-2" href="#skills">II. {{ $t('hello.chapter.2') }}</a></li>
+      <li class="chapter3"><a class="flex items-center text-secondary hover:text-tertiary duration-100" href="#contact">III. {{ $t('hello.chapter.3') }}</a></li>
     </ul>
 
   </section>
