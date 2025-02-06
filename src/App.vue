@@ -16,7 +16,7 @@ enum ProjectType {
   PERSO = 2
 }
 
-const { t } = useI18n();
+const { t, locale } = useI18n();
 
 const loaded = ref(false);
 const filter = ref();
@@ -129,6 +129,11 @@ const projects = ref([
 ]);
 const projectSelected = ref();
 
+
+const setLocale = (value: string) => {
+  localStorage.setItem('lang', value);
+}
+
 const resizeObserver = new ResizeObserver(entries => {
   if (filter.value) {
     const bodyHeight = entries[0].target.clientHeight;
@@ -162,6 +167,13 @@ window.addEventListener('resize', () => {
 });
 
 onMounted(() => {
+  const pathname = window.location.pathname;
+  if (pathname === '/fr') localStorage.setItem('lang', 'fr');
+  if (pathname === '/en') localStorage.setItem('lang', 'en');
+
+  const lsLang = localStorage.getItem('lang');
+  if (lsLang) locale.value = lsLang;
+
   setTimeout(() => {
     loaded.value = true;
   }, 2000);
@@ -181,6 +193,14 @@ onMounted(() => {
 
 <template>
   <ProjectModal class="project-modal" @close="onProjectClose" v-if="projectSelected" :project="projectSelected" />
+
+  <header class="z-10 absolute top-0 left-0 flex justify-between w-full p-4 sm:p-8">
+    <div></div>
+    <nav class="text-[10px] sm:text-xs">
+      <a :class="`heavy-rain-text mr-2 sm:mr-4 ${locale === 'fr' ? 'border-b-2 border-secondary' : ''}`" href="/" @click="setLocale('fr')">FR</a>
+      <a :class="`heavy-rain-text ${locale === 'en' ? 'border-b-2 border-secondary' : ''}`" href="/en" @click="setLocale('en')">EN</a>
+    </nav>
+  </header>
 
   <div>
     <Hello class="h-full" />

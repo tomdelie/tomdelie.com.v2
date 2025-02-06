@@ -7,5 +7,5 @@ import messages from '@intlify/unplugin-vue-i18n/messages';
 
 register();
 
-const i18n = createI18n({ locale: 'en', fallbackLocale: 'en', messages });
+const i18n = createI18n({ locale: 'fr', fallbackLocale: 'en', messages });
 createApp(App).use(i18n).mount('#app');

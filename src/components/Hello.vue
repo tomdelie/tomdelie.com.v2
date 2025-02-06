@@ -6,7 +6,6 @@ import LettrineCorner from './LettrineCorner.vue';
   <section class="hi relative text-center flex flex-col align-center justify-center">
 
     <div class="flowers">
-      <LettrineCorner class="w-[160px] sm:w-[200px] lg:w-[280px] absolute top-2 right-2 sm:top-4 sm:right-4" />
       <LettrineCorner class="scale-x-[-1] w-[160px] sm:w-[200px] lg:w-[280px] absolute top-2 left-2 sm:top-4 sm:left-4" />
     </div>
 
