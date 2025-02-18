@@ -7,7 +7,7 @@ import GitHub from './components/GitHub.vue';
 import Linkedin from './components/Linkedin.vue';
 import Malt from './components/Malt.vue';
 import Contact from './components/Contact.vue';
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, computed } from 'vue';
 import ScrollReveal from 'scrollreveal';
 import { useI18n } from 'vue-i18n';
 import { useRoute } from 'vue-router';
@@ -22,114 +22,118 @@ const route = useRoute();
 
 const loaded = ref(false);
 const filter = ref();
-const projects = ref([
-  {
-    id: 'ttg',
-    type: ProjectType.PRO,
-    title: 'Taittinger, Book a visit',
-    description: t('projects.taittinger'),
-    link: 'https://book-a-visit.taittinger.fr/',
-    images: ['/projects/ttg_1.png', '/projects/ttg_2.png', '/projects/ttg_3.png', '/projects/ttg_4.png'],
-    tags: [
-      { name: 'TypeScript', icon: '/icons/javascript/typescript.svg' },
-      { name: 'Nuxt', icon: '/icons/javascript/nuxtjs.svg' },
-      { name: 'NestJS', icon: '/icons/javascript/nestjs.svg' },
-      { name: 'Stripe', icon: '/icons/others/stripe.svg' }
-    ],
-  },
-  {
-    id: 'eatic',
-    type: ProjectType.PRO,
-    title: 'Eatic',
-    description: t('projects.eatic'),
-    link: '',
-    images: ['/projects/eatic.png'],
-    tags: [
-      { name: 'TypeScript', icon: '/icons/javascript/typescript.svg' },
-      { name: 'Vue.js', icon: '/icons/javascript/vuejs.svg' },
-      { name: 'Node.js', icon: '/icons/javascript/nodejs.svg' },
-      { name: 'Stripe', icon: '/icons/others/stripe.svg' }
-    ],
-  },
-  {
-    id: 'alchimie',
-    type: ProjectType.PRO,
-    title: 'Baccarat, Alchimie',
-    description: t('projects.alchimie'),
-    link: 'https://baccarat-heritage.com/fr/alchimie/',
-    images: ['/projects/baccarat_alchimie_1.png', '/projects/baccarat_alchimie_2.png', '/projects/baccarat_alchimie_3.png'],
-    tags: [
-      { name: 'Wordpress', icon: '/icons/php/wordpress.svg' },
-      { name: 'ACF', icon: '/icons/php/wordpress.svg' },
-      { name: 'Polylang', icon: '/icons/php/wordpress.svg' },
-      { name: 'CSS', icon: '/icons/others/css.svg' }
-    ],
-  },
-  {
-    id: 'viking',
-    type: ProjectType.PRO,
-    title: 'Viking, Cités Immersives',
-    description: t('projects.viking'),
-    link: 'https://viking.cites-immersives.fr/fr',
-    images: ['/projects/viking_1.png', '/projects/viking_2.png', '/projects/viking_3.png'],
-    tags: [
-      { name: 'Wordpress', icon: '/icons/php/wordpress.svg' },
-      { name: 'ACF', icon: '/icons/php/wordpress.svg' },
-      { name: 'Polylang', icon: '/icons/php/wordpress.svg' },
-      { name: 'CSS', icon: '/icons/others/css.svg' }
-    ],
-  },
-  {
-    id: 'photocinelive',
-    type: ProjectType.PRO,
-    title: 'PhotoCineLive',
-    description: t('projects.photocinelive'),
-    link: 'https://photocinelive.com/fr',
-    images: ['/projects/pcl_1.png', '/projects/pcl_2.png', '/projects/pcl_3.png', '/projects/pcl_4.png'],
-    tags: [
-      { name: 'Wordpress', icon: '/icons/php/wordpress.svg' },
-      { name: 'ACF', icon: '/icons/php/wordpress.svg' },
-      { name: 'Polylang', icon: '/icons/php/wordpress.svg' },
-      { name: 'CSS', icon: '/icons/others/css.svg' }
-    ],
-  },
-  {
-    id: 'pixel',
-    type: ProjectType.PERSO,
-    title: 'Pixel World',
-    description: t('projects.pixel'),
-    link: 'https://tomdelie.itch.io/pixel-world',
-    images: ['/projects/pixel_world_1.png', '/projects/pixel_world_2.png', '/projects/pixel_world_3.png'],
-    tags: [
-      { name: 'Godot 3.2', icon: '/icons/others/godotengine.svg' },
-      { name: 'GDScript', icon: '/icons/others/godotengine.svg' }
-    ],
-  },
-  // {
-  //   id: 'bomberman',
-  //   type: ProjectType.PERSO,
-  //   title: 'Bomberman en ligne',
-  //   description: 'Développment d\'un bomberman multijoueur.',
-  //   link: 'https://tomdelie.itch.io/pixel-world',
-  //   images: ['/projects/placeholder.png'],
-  //   tags: [
-  //     { name: 'Godot 4.3', icon: '/icons/others/godotengine.svg' },
-  //     { name: 'GDScript', icon: '/icons/others/godotengine.svg' }
-  //   ],
-  // },
-  // {
-  //   id: 'shaders',
-  //   type: ProjectType.PERSO,
-  //   title: 'Shaders',
-  //   description: 'Un peu d\'imagination et de maths avec les shaders.',
-  //   link: 'https://www.shadertoy.com/user/tomdelie',
-  //   images: ['/projects/snowflake.png'],
-  //   tags: [
-  //     { name: 'GLSL', icon: '/icons/others/opengl.svg' }
-  //   ],
-  // },
-]);
 const projectSelected = ref();
+
+const projects = computed(() => {
+  return [
+    {
+      id: 'ttg',
+      type: ProjectType.PRO,
+      title: 'Taittinger, Book a visit',
+      description: t('projects.taittinger'),
+      link: 'https://book-a-visit.taittinger.fr/',
+      images: ['/projects/ttg_1.png', '/projects/ttg_2.png', '/projects/ttg_3.png', '/projects/ttg_4.png'],
+      tags: [
+        { name: 'TypeScript', icon: '/icons/javascript/typescript.svg' },
+        { name: 'Nuxt', icon: '/icons/javascript/nuxtjs.svg' },
+        { name: 'NestJS', icon: '/icons/javascript/nestjs.svg' },
+        { name: 'Stripe', icon: '/icons/others/stripe.svg' }
+      ],
+    },
+    {
+      id: 'eatic',
+      type: ProjectType.PRO,
+      title: 'Eatic',
+      description: t('projects.eatic'),
+      link: '',
+      images: ['/projects/eatic.png'],
+      tags: [
+        { name: 'TypeScript', icon: '/icons/javascript/typescript.svg' },
+        { name: 'Vue.js', icon: '/icons/javascript/vuejs.svg' },
+        { name: 'Node.js', icon: '/icons/javascript/nodejs.svg' },
+        { name: 'Stripe', icon: '/icons/others/stripe.svg' }
+      ],
+    },
+    {
+      id: 'alchimie',
+      type: ProjectType.PRO,
+      title: 'Baccarat, Alchimie',
+      description: t('projects.alchimie'),
+      link: 'https://baccarat-heritage.com/fr/alchimie/',
+      images: ['/projects/baccarat_alchimie_1.png', '/projects/baccarat_alchimie_2.png', '/projects/baccarat_alchimie_3.png'],
+      tags: [
+        { name: 'Wordpress', icon: '/icons/php/wordpress.svg' },
+        { name: 'ACF', icon: '/icons/php/wordpress.svg' },
+        { name: 'Polylang', icon: '/icons/php/wordpress.svg' },
+        { name: 'CSS', icon: '/icons/others/css.svg' }
+      ],
+    },
+    {
+      id: 'viking',
+      type: ProjectType.PRO,
+      title: 'Viking, Cités Immersives',
+      description: t('projects.viking'),
+      link: 'https://viking.cites-immersives.fr/fr',
+      images: ['/projects/viking_1.png', '/projects/viking_2.png', '/projects/viking_3.png'],
+      tags: [
+        { name: 'Wordpress', icon: '/icons/php/wordpress.svg' },
+        { name: 'ACF', icon: '/icons/php/wordpress.svg' },
+        { name: 'Polylang', icon: '/icons/php/wordpress.svg' },
+        { name: 'CSS', icon: '/icons/others/css.svg' }
+      ],
+    },
+    {
+      id: 'photocinelive',
+      type: ProjectType.PRO,
+      title: 'PhotoCineLive',
+      description: t('projects.photocinelive'),
+      link: 'https://photocinelive.com/fr',
+      images: ['/projects/pcl_1.png', '/projects/pcl_2.png', '/projects/pcl_3.png', '/projects/pcl_4.png'],
+      tags: [
+        { name: 'Wordpress', icon: '/icons/php/wordpress.svg' },
+        { name: 'ACF', icon: '/icons/php/wordpress.svg' },
+        { name: 'Polylang', icon: '/icons/php/wordpress.svg' },
+        { name: 'CSS', icon: '/icons/others/css.svg' }
+      ],
+    },
+    {
+      id: 'pixel',
+      type: ProjectType.PERSO,
+      title: 'Pixel World',
+      description: t('projects.pixel'),
+      link: 'https://tomdelie.itch.io/pixel-world',
+      images: ['/projects/pixel_world_1.png', '/projects/pixel_world_2.png', '/projects/pixel_world_3.png'],
+      tags: [
+        { name: 'Godot 3.2', icon: '/icons/others/godotengine.svg' },
+        { name: 'GDScript', icon: '/icons/others/godotengine.svg' }
+      ],
+    },
+    // {
+    //   id: 'bomberman',
+    //   type: ProjectType.PERSO,
+    //   title: 'Bomberman en ligne',
+    //   description: 'Développment d\'un bomberman multijoueur.',
+    //   link: 'https://tomdelie.itch.io/pixel-world',
+    //   images: ['/projects/placeholder.png'],
+    //   tags: [
+    //     { name: 'Godot 4.3', icon: '/icons/others/godotengine.svg' },
+    //     { name: 'GDScript', icon: '/icons/others/godotengine.svg' }
+    //   ],
+    // },
+    // {
+    //   id: 'shaders',
+    //   type: ProjectType.PERSO,
+    //   title: 'Shaders',
+    //   description: 'Un peu d\'imagination et de maths avec les shaders.',
+    //   link: 'https://www.shadertoy.com/user/tomdelie',
+    //   images: ['/projects/snowflake.png'],
+    //   tags: [
+    //     { name: 'GLSL', icon: '/icons/others/opengl.svg' }
+    //   ],
+    // },
+    ]
+  }
+);
 
 const resizeObserver = new ResizeObserver(entries => {
   if (filter.value) {

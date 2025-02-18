@@ -53,7 +53,11 @@ onMounted(() => {
 
 <template>
   <div class="project flex flex-col">
-    <h3 class="text-sm lg:text-base font-bold uppercase text-secondary mb-1 heavy-rain-text">{{ title }}</h3>
+    <div class="flex mb-1">
+      <h3 class="text-sm lg:text-base font-bold uppercase text-secondary mr-3 heavy-rain-text">{{ title }}</h3>
+      <a v-if="link" target="_blank" :href="link"><OpenInNew class="mt-0.5 w-[18px] h-[19px] hover:text-tertiary duration-200" /></a>
+    </div>
+
     <div class="flex-shrink-0 relative" title="Agrandir">
       <div :class="`mask mask-${index%4} w-full h-full`">
         <swiper-container :class="`swiper${id}`" :init="false" navigation="true" pagination-dynamic-bullets="true">
@@ -72,16 +76,14 @@ onMounted(() => {
     </div>
 
     <div class="mt-1 text-secondary relative h-full">
-      <a v-if="link" target="_blank" :href="link"><OpenInNew class="w-[18px] h-[19px] hover:text-tertiary duration-200 absolute top-0 right-0" /></a>
-      
-      <p class="text-sm">{{ description }}</p>
-
       <div class="flex flex-wrap">
-        <div v-for="t of tags" :key="t.name" class="flex items-center bg-primary text-sm text-secondary mb-1.5 py-0.5 mr-3">
+        <div v-for="t of tags" :key="t.name" class="flex items-center bg-primary text-sm text-secondary mb-0 lg:mb-1.5 py-0.5 mr-3">
           <img class="w-[12px] h-[12px] mr-1 translate-y-[1px]" loading="lazy" :src="t.icon" alt="Icon">
           <span>{{ t.name }}</span>
         </div>
       </div>
+
+      <p class="text-sm">{{ description }}</p>
     </div>
   </div>
 </template>

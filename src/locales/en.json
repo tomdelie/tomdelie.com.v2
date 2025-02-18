@@ -19,12 +19,12 @@
       "pro": "Professional",
       "fun": "Personal"
     },
-    "taittinger": "Online booking website.",
-    "eatic": "Web and mobile meal delivery app.",
-    "alchimie": "Wordpress theme development.",
-    "viking": "Wordpress theme development.",
-    "photocinelive": "Wordpress theme development.",
-    "pixel": "2D platform game development."
+    "taittinger": "Front and back-end development of the tasting and tour reservation website for Taittinger, a French Champagne house.",
+    "eatic": "Front and back-end development of a web and mobile app focused on vegetarian meal delivery.",
+    "alchimie": "Development of a WordPress theme for Baccarat Alchemy, an immersive experience at Chapelle Saint-Anne.",
+    "viking": "Development of a WordPress theme for Cité Immersive Viking, an immersive museum in Rouen.",
+    "photocinelive": "Development of a WordPress theme for PhotoCineLive, live production solutions.",
+    "pixel": "Development of a 2D platform game."
   },
   "skills": {
     "title_initial": "S",
