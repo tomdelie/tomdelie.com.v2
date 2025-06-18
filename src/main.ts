@@ -15,7 +15,7 @@ import NotFound from './pages/NotFound.vue';
 const app = createApp(App);
 
 const router = createRouter({
-  scrollBehavior(to, from, savedPosition) {
+  scrollBehavior(_to, _from, savedPosition) {
     if (savedPosition) {
       return savedPosition
     } else {
@@ -53,7 +53,7 @@ let smoother = ScrollSmoother.create({
   normalizeScroll: true
 });
 
-router.beforeEach((to, from, next) => {
+router.beforeEach((to, _from, next) => {
   const locale = to.params.locale as string;
 
   if (smoother) {

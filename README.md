@@ -8,16 +8,26 @@
 </div>
 <br />
 
-<h2>Fonts</h2>
+<h2>Credits</h2>
 <ul>
   <li>
-    <a href="https://www.dafont.com/heavy-rain-2.font">
-      Heavy Rain by Måns Grebäck
+    <a href="https://www.lauren-waller.com/">
+      Lauren Waller
+    </a>
+  </li>
+  <li>
+    <a href="https://lusion.co/">
+      Lusion & Lusion Labs
+    </a>
+  </li>
+  <li>
+    <a href="https://katherine-le.com/">
+      Katherine Le
     </a>
   </li>
   <li>
     <a href="https://fonts.google.com/specimen/Lora">
-      Lora by Cyreal
+      Lora font by Cyreal
     </a>
   </li>
 </ul>

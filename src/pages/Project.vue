@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import { computed, onBeforeUnmount, onMounted, reactive, ref } from 'vue';
+import { computed, onBeforeUnmount, onMounted, reactive } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import gsap, { Bounce, Back } from 'gsap';
 import { useI18n } from 'vue-i18n';
