@@ -1,24 +1,11 @@
 {
-  "hello": {
-    "job": {
-      "1": "FullStack",
-      "2": "JavaScript",
-      "3": "Developer"
-    },
-    "chapter": {
-      "1": "see my projects",
-      "2": "my skills",
-      "3": "contact me"
-    }
+  "home": {
+    "intro": "Hey— I'm Tom,",
+    "title": "FullStack JavaScript<br> Developer & Freelance",
+    "quote": "Create products that make sense,<br> from the first click to the last line of code."
   },
   "projects": {
-    "title_initial": "P",
-    "title": "rojects",
-    "filters": {
-      "all": "All",
-      "pro": "Professional",
-      "fun": "Personal"
-    },
+    "back": "Back",
     "taittinger": "Front and back-end development of the tasting and tour reservation website for Taittinger, a French Champagne house.",
     "eatic": "Front and back-end development of a web and mobile app focused on vegetarian meal delivery.",
     "alchimie": "Development of a WordPress theme for Baccarat Alchemy, an immersive experience at Chapelle Saint-Anne.",
@@ -26,19 +13,8 @@
     "photocinelive": "Development of a WordPress theme for PhotoCineLive, live production solutions.",
     "pixel": "Development of a 2D platform game."
   },
-  "skills": {
-    "title_initial": "S",
-    "title": "kills",
-    "automation": "Automation",
-    "others": "Other"
-  },
   "contact": {
-    "title_initial": "C",
-    "title": "ontact",
-    "para": {
-      "1": "Would you like to find out more? Talk about your project?",
-      "2": "Send me a message and let's talk about it."
-    },
+    "title": "Let's work<br> together!",
     "form": {
       "email": "Email",
       "message": "Message"
@@ -49,7 +25,9 @@
     "error": "Oops! An error has occurred, please try again.",
     "rateLimited": "Please wait a few minutes before submitting the form again."
   },
-  "footer": {
-    "developed": "Made by Tom Délié"
+  "404": {
+    "title": "Error",
+    "subtitle": "404",
+    "button": "Return to homepage"
   }
 }

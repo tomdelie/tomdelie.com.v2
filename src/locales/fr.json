@@ -1,44 +1,21 @@
 {
-  "hello": {
-    "job": {
-      "1": "Développeur",
-      "2": "JavaScript",
-      "3": "FullStack"
-    },
-    "chapter": {
-      "1": "voir mes projets",
-      "2": "mes compétences",
-      "3": "me contacter"
-    }
+  "home": {
+    "intro": "Hey— je suis Tom,",
+    "title": "Développeur FullStack <br>Javascript & Freelance",
+    "quote": "Créer des produits qui font sens,<br> du premier clic à la dernière ligne de code."
   },
   "projects": {
-    "title_initial": "P",
-    "title": "rojets",
-    "filters": {
-      "all": "Tous",
-      "pro": "Professionnel",
-      "fun": "Personnel"
-    },
+    "back": "Retour",
+    "title": "Projets",
     "taittinger": "Développement front et back end du site de réservation de dégustation et de visite pour Taittinger, une maison de Champagne française.",
     "eatic": "Développement front et back end d'une application web et mobile de livraison de repas végétariens.",
     "alchimie": "Développement d'un thème Wordpress pour Baccarat Alchimie, une expérience immersive à la Chapelle Saint-Anne.",
-    "viking": "Développement d'un thème Wordpress pour la Cité Immersive Viking, un musée immersif à Rouen.",
+    "cite-immersive-viking": "Développement d'un thème Wordpress pour la Cité Immersive Viking, un musée immersif à Rouen.",
     "photocinelive": "Développement d'un thème Wordpress pour PhotoCineLive, spécialisé dans les solutions de production en direct.",
-    "pixel": "Développement d'un jeu de plateforme en 2D."
-  },
-  "skills": {
-    "title_initial": "C",
-    "title": "ompétences",
-    "automation": "Automatisation",
-    "others": "Autres"
+    "pixel-world": "Développement d'un jeu de plateforme en 2D."
   },
   "contact": {
-    "title_initial": "C",
-    "title": "ontact",
-    "para": {
-      "1": "Vous voulez en savoir plus ? Parler de votre projet ?",
-      "2": "Envoyez-moi un message et discutons-en."
-    },
+    "title": "Et si on<br> collaborait ?",
     "form": {
       "email": "Email",
       "message": "Message"
@@ -49,7 +26,9 @@
     "error": "Oops ! Une erreur s'est produite, veuillez réessayer.",
     "rateLimited": "Veuillez attendre quelques minutes avant de soumettre le formulaire de nouveau."
   },
-  "footer": {
-    "developed": "Développé par Tom Délié"
+  "404": {
+    "title": "Erreur",
+    "subtitle": "404",
+    "button": "Retour à l'accueil"
   }
 }
