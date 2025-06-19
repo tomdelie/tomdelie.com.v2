@@ -28,9 +28,18 @@ html, body {
     rgba(var(--secondary-rgb), 0.1) 10px,
     rgba(var(--secondary-rgb), 0.1) 12px
   ); */
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  box-sizing: border-box;
   background-color: var(--primary);
   color: var(--secondary);
   letter-spacing: 0.16px;
+}
+
+#app { 
+  height: 100%;
 }
 
 * {
@@ -63,6 +72,7 @@ html, body {
   width: calc(100% - 2rem);
   margin-left: 1rem;
 }
+
 
 @media (min-width: 1024px) {
   .wrapper {

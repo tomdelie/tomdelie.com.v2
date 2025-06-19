@@ -17,7 +17,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div>
+  <div class="h-full">
     <SplashScreen v-model:value="isSplashScreenVisible" />
     <NavLeft class="w-16 hidden lg:flex fixed bottom-0 z-50 left-0 pt-16 pb-9" />
 
@@ -35,8 +35,8 @@ onMounted(() => {
       </div>
     </div>
     
-    <div class="cursor-follower"></div>
-    <div class="dot-follower"></div>
+    <div class="cursor-follower hidden lg:block"></div>
+    <div class="dot-follower hidden lg:block"></div>
 
     <div id="smooth-wrapper">
       <div id="smooth-content">

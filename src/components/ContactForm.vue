@@ -90,7 +90,7 @@ onMounted(() => {
       delay: 0.25,
       scrollTrigger: {
         trigger: contactForm.value,
-        start: "top 80%",
+        start: "top 90%",
         toggleActions: "play none none none"
       }
     }
