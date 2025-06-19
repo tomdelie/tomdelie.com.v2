@@ -4,16 +4,24 @@ import Grid from './components/Grid.vue';
 import Logo from './components/Logo.vue';
 import { useHelper } from './composables/helper';
 import { useI18n } from 'vue-i18n';
+import SplashScreen from './components/SplashScreen.vue';
+import { onMounted, ref } from 'vue';
 
 const { locale } = useI18n();
 const { switchLocalePath } = useHelper();
+const isSplashScreenVisible = ref(true);
+
+onMounted(() => {
+
+});
 </script>
 
 <template>
   <div>
+    <SplashScreen v-model:value="isSplashScreenVisible" />
     <NavLeft class="w-16 hidden lg:flex fixed bottom-0 z-50 left-0 pt-16 pb-9" />
 
-    <div class="fixed top-0 left-0 w-full h-12 border-b border-secondary border-opacity-10 z-[999] bg-primary">
+    <div class="fixed top-0 left-0 w-full h-12 border-b border-secondary border-opacity-10 z-[100] bg-primary">
       <div class="wrapper flex items-center justify-between h-full">
         <div class="flex items-center">
           <Logo />
@@ -33,10 +41,12 @@ const { switchLocalePath } = useHelper();
     <div id="smooth-wrapper">
       <div id="smooth-content">
         
-        <div class="relative wrapper bg-primary border-l border-r border-secondary border-opacity-10">
+        <div class="relative wrapper bg-primary">
           <Grid class="absolute top-0 left-0 w-full h-full z-0" />
 
-          <RouterView />
+          <template v-if="!isSplashScreenVisible">
+            <RouterView />
+          </template>
         </div>
 
       </div>

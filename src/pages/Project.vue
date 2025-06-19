@@ -97,6 +97,18 @@ onMounted(() => {
       gsap.to(".dot-follower", { scale: 1.0, ease: Bounce.easeOut });
     });
   });
+
+  gsap.fromTo(
+    document.querySelectorAll('.info'),
+    { opacity: 0, y: 50 },
+    { opacity: 1, y: 0, duration: 1, stagger: 0.2, ease: 'power2.out' }
+  );
+
+  gsap.fromTo(
+    document.querySelector('.images'),
+    { opacity: 0 },
+    { opacity: 1, duration: 1, ease: 'power2.out', delay: 1 }
+  );
 });
 
 onBeforeUnmount(() => {
@@ -121,20 +133,20 @@ onBeforeUnmount(() => {
 
             <h1 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-medium">{{ project.name }}</h1>
 
-            <div class="mt-8 lg:mt-16">
+            <div class="info mt-8 lg:mt-16">
               <ul class="flex flex-wrap tags">
                 <li>{{ project.description }}</li>
               </ul>
             </div>
 
-            <div class="mt-6">
+            <div class="info mt-6">
               <h2 class="uppercase font-bold">Stack</h2>
               <ul class="flex flex-wrap tags">
                 <li v-for="tag of project.tags">{{ tag }}</li>
               </ul>
             </div>
 
-            <div class="mt-6">
+            <div class="info mt-6">
               <h2 class="uppercase font-bold">Année</h2>
               <ul class="flex flex-wrap tags">
                 <li>{{ project.date }}</li>
@@ -142,10 +154,12 @@ onBeforeUnmount(() => {
             </div>
           </div>
 
-          <a class="follower-trigger py-3 px-6 text-primary bg-secondary hover:bg-tertiary duration-300 text-center text-sm uppercase" :href="project.url" target="_blank" rel="noopener noreferrer">Visit website</a>
+          <div class="info">
+            <a class="follower-trigger py-3 px-6 text-primary bg-secondary hover:bg-tertiary duration-300 text-center text-sm uppercase" :href="project.url" target="_blank" rel="noopener noreferrer">Visit website</a>
+          </div>
         </div>
 
-        <div class="w-full lg:w-[50%] grid gap-8 xl:gap-16 pb-16 lg:mt-32" :class="project.landscape ? 'grid-cols-1' : 'grid-cols-1 min-[450px]:grid-cols-2'">
+        <div class="images w-full lg:w-[50%] grid gap-8 xl:gap-16 pb-16 lg:mt-32" :class="project.landscape ? 'grid-cols-1' : 'grid-cols-1 min-[450px]:grid-cols-2'">
           <img v-for="(img, index) of project.images" class="z-20 shadow-lg w-full" :src="img" :alt="`Project Image ${ index+1 }`">
         </div>
       </div>

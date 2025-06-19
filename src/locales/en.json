@@ -14,7 +14,7 @@
     "pixel": "Development of a 2D platform game."
   },
   "contact": {
-    "title": "Let's work<br> together!",
+    "title": "<span>Let's work</span><span>together!</span>",
     "form": {
       "email": "Email",
       "message": "Message"
@@ -28,6 +28,6 @@
   "404": {
     "title": "Error",
     "subtitle": "404",
-    "button": "Return to homepage"
+    "button": "Back to home"
   }
 }

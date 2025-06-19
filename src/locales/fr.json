@@ -15,7 +15,7 @@
     "pixel-world": "Développement d'un jeu de plateforme en 2D."
   },
   "contact": {
-    "title": "Et si on<br> collaborait ?",
+    "title": "<div><span>Et si on</span></div><div><span> collaborait ?</span></div>",
     "form": {
       "email": "Email",
       "message": "Message"

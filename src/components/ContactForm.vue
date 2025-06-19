@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
+import { gsap, Power2 } from 'gsap';
 
 const contactForm = ref();
 
@@ -76,6 +77,24 @@ onMounted(() => {
       loading.value = false;
     });
   });
+
+  gsap.fromTo(
+    document.querySelectorAll('.form-element'),
+    { opacity: 0, y: 40 },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      stagger: 0.2,
+      ease: Power2.easeOut,
+      delay: 0.25,
+      scrollTrigger: {
+        trigger: contactForm.value,
+        start: "top 80%",
+        toggleActions: "play none none none"
+      }
+    }
+  );
 });
 </script>
 
@@ -84,17 +103,17 @@ onMounted(() => {
     <input class="form-hp" v-model="honeypot.url" autocomplete="off" type="text" tabindex="-1" name="url" />
     <input class="form-hp" v-model="honeypot.phone" autocomplete="off" type="text" tabindex="-1" name="phone" />
 
-    <div class="flex flex-col items-start mb-5">
+    <div class="form-element flex flex-col items-start mb-5">
       <label class="text-sm mb-1 ml-2" for="oazdjkazdojve">{{ $t('contact.form.email') }}</label>
       <input id="oazdjkazdojve" name="oazdjkazdojve" class="follower-trigger p-4 border border-secondary bg-primary placeholder:text-secondary placeholder:opacity-70 text-sm w-full" v-model="form.email" :disabled="success || loading" required type="email" placeholder="contact@email.com" />
     </div>
     
-    <div class="flex flex-col items-start">
+    <div class="form-element flex flex-col items-start">
       <label class="text-sm mb-1 ml-2" for="kqsdoiazcnize">{{ $t('contact.form.message') }}</label>
       <textarea id="kqsdoiazcnize" name="kqsdoiazcnize" class="follower-trigger w-full p-4 border border-secondary bg-primary placeholder:text-secondary placeholder:opacity-70 text-sm min-h-[100px] max-h-[400px]" v-model="form.message" :disabled="success || loading" required rows="6" :placeholder="$t('contact.placeholder')"></textarea>
     </div>
 
-    <button type="submit" :disabled="success || loading" class="follower-trigger py-3 md:py-4 w-[150px] md:w-[200px] text-primary mt-12 mx-auto flex items-center justify-center">
+    <button type="submit" :disabled="success || loading" class="form-element follower-trigger py-3 md:py-4 w-[150px] md:w-[200px] text-primary mt-12 mx-auto flex items-center justify-center">
       <span v-if="!loading && !success" class="font-medium text-sm lg:translate-y-[1px]">{{ $t('contact.button') }}</span>
       
       <img v-if="loading" id="loading" src="/icons/loading.svg" width="18" alt="Loading">

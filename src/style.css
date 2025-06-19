@@ -16,6 +16,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  overflow-y: scroll;
+}
+
 html, body {
   /* background: repeating-linear-gradient(
     -45deg,
@@ -44,13 +48,14 @@ html, body {
 
 .star::before {
   display: none;
-  content: '*';
-  font-size: 2rem;
+  content: '';
+  background: url('/icons/star-tertiary.svg') no-repeat center center;
+  width: 1rem;
+  height: 1rem;
   color: var(--tertiary);
   position: absolute;
-  top: 1rem;
-  left: -1.7rem;
-  transform-origin: 50% 40%;
+  top: 1.75rem;
+  left: -1.5rem;
   animation: rotate 4s linear infinite;
 }
 
