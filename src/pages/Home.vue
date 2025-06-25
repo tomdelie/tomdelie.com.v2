@@ -52,7 +52,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="flex flex-col relative my-12">
+  <div class="flex flex-col relative py-12">
     <img class="absolute top-20 lg:left-0 xl:left-20 2xl:left-40 lg:right-auto right-0 -translate-y-1/3 opacity-5 select-none w-[100px] scale-[6] sm:scale-[10] lg:scale-[13] 2xl:scale-[15] pointer-events-none" src="/icons/star.svg" alt="Star">
 
     <div class="flex flex-col pb-16">

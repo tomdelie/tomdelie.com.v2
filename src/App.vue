@@ -39,7 +39,7 @@ onMounted(() => {
     <div class="dot-follower hidden lg:block"></div>
 
     <div id="smooth-wrapper">
-      <div id="smooth-content">
+      <div id="smooth-content" class="overflow-x-hidden bg-primary">
         
         <div class="relative wrapper bg-primary">
           <Grid class="absolute top-0 left-0 w-full h-full z-0" />

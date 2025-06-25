@@ -47,24 +47,23 @@ app.mount('#app');
 register();
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-// let smoother = ScrollSmoother.create({
-//   smooth: 2,
-//   smoothTouch: 0.1,
-//   effects: true,
-//   normalizeScroll: true
-// });
+let smoother = ScrollSmoother.create({
+  smooth: 2,
+  effects: true,
+  normalizeScroll: true
+});
 
 router.beforeEach((to, _from, next) => {
   const locale = to.params.locale as string;
 
-  // if (smoother) {
-  //   smoother.kill();
-  //   smoother = ScrollSmoother.create({
-  //     smooth: 2,
-  //     effects: true,
-  //     normalizeScroll: true
-  //   });
-  // }
+  if (smoother) {
+    smoother.kill();
+    smoother = ScrollSmoother.create({
+      smooth: 2,
+      effects: true,
+      normalizeScroll: true
+    });
+  }
 
   gsap.to(".cursor-follower", { scale: 1.0, duration: 0 });
   gsap.to(".dot-follower", { scale: 1.0, ease: Bounce.easeOut });
