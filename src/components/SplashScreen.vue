@@ -37,12 +37,33 @@ onMounted(() => {
       }
     );
 
+  gsap.to('.spin', {
+    rotation: 360,
+    duration: 2,
+    ease: 'linear',
+    repeat: -1,
+    transformOrigin: 'center center',
+  });
+
+  gsap.timeline({ repeat: -1, repeatDelay: 0.5, delay: 1 })
+    .to('.splash-logo .letter', {
+      y: -24,
+      duration: 0.5,
+      ease: 'power1.out',
+      stagger: {
+        each: 0.05,
+        yoyo: true,
+        repeat: 1,
+        repeatDelay: 0,
+      },
+    });
+  
   gsap.timeline()
     .to('.splash-logo', {
       y: -50,
       opacity: 0,
       duration: 0.5,
-      delay: 2,
+      delay: 3,
       ease: 'power2.in',
       onComplete: () => {
         emit('update:value', false);
@@ -55,6 +76,7 @@ onMounted(() => {
         document.querySelector('.splash-screen')?.classList.add('hidden');
       }
     });
+
 });
 </script>
 
@@ -62,7 +84,21 @@ onMounted(() => {
   <div class="splash-screen">
     <div class="relative wrapper flex items-center justify-center h-full">
       <Grid class="splash-grid absolute top-0 left-0 w-full h-full" />
-      <div class="splash-logo font-bold tracking-[-0.05em] text-xl flex items-start"><span>Tom Délié</span><img class="translate-y-[4px] w-2" src="/icons/star-tertiary.svg" alt="Star"></div>
+      <div class="splash-logo font-bold tracking-[-0.05em] text-2xl flex items-start">
+        <div class="flex">
+          <span class="letter">T</span>
+          <span class="letter">o</span>
+          <span class="letter">m</span>
+          <span>&nbsp;</span>
+          <span class="letter">D</span>
+          <span class="letter">é</span>
+          <span class="letter">l</span>
+          <span class="letter">i</span>
+          <span class="letter">é</span>
+        </div>
+        <img class="spin letter translate-y-[4px] w-2" src="/icons/star-tertiary.svg" alt="Star">
+      </div>
+
     </div>
   </div>
 </template>

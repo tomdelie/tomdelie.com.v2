@@ -159,7 +159,7 @@ onBeforeUnmount(() => {
           </div>
         </div>
 
-        <div class="images w-full lg:w-[50%] grid gap-8 xl:gap-16 pb-16 lg:mt-32" :class="project.landscape ? 'grid-cols-1' : 'grid-cols-1 min-[450px]:grid-cols-2'">
+        <div class="images w-full lg:w-[58.33%] grid gap-8 xl:gap-16 pb-16 lg:mt-32" :class="project.landscape ? 'grid-cols-1' : 'grid-cols-1 min-[450px]:grid-cols-2'">
           <img v-for="(img, index) of project.images" class="z-20 shadow-lg w-full" :src="img" :alt="`Project Image ${ index+1 }`">
         </div>
       </div>

@@ -15,13 +15,6 @@ import NotFound from './pages/NotFound.vue';
 const app = createApp(App);
 
 const router = createRouter({
-  scrollBehavior(_to, _from, savedPosition) {
-    if (savedPosition) {
-      return savedPosition
-    } else {
-      return { top: 0 }
-    }
-  },
   history: createWebHistory(),
   routes: [
     {
@@ -58,6 +51,7 @@ router.beforeEach((to, _from, next) => {
 
   if (smoother) {
     smoother.kill();
+
     smoother = ScrollSmoother.create({
       smooth: 2,
       effects: true,

@@ -12,7 +12,6 @@ const { switchLocalePath } = useHelper();
 const isSplashScreenVisible = ref(true);
 
 onMounted(() => {
-
 });
 </script>
 
