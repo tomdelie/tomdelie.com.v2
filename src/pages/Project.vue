@@ -100,14 +100,37 @@ onMounted(() => {
 
   gsap.fromTo(
     document.querySelectorAll('.info'),
-    { opacity: 0, y: 50 },
-    { opacity: 1, y: 0, duration: 1, stagger: 0.2, ease: 'power2.out' }
+    { opacity: 0, y: 200 },
+    { opacity: 1, y: 0, duration: 1, stagger: 0.1, ease: 'power2.out' }
   );
 
   gsap.fromTo(
-    document.querySelector('.images'),
+    document.querySelector('.images > .image'),
     { opacity: 0 },
-    { opacity: 1, duration: 1, ease: 'power2.out', delay: 1 }
+    { opacity: 1, duration: 1, ease: 'power2.out' }
+  );
+
+  gsap.fromTo(
+    document.querySelectorAll('.images > .image'),
+    { y: 100 },
+    { y: 0, duration: 1, stagger: 0.1, ease: 'power2.out' }
+  );
+
+  gsap.fromTo(
+    document.querySelectorAll('.back'),
+    { x: '50px', opacity: 0, },
+    {
+      opacity: 1,
+      x: 0,
+      duration: 1,
+      ease: 'power2.out',
+      delay: 1,
+      scrollTrigger: {
+        trigger: '.title',
+        start: 'top 90%',
+        toggleActions: 'play none none none'
+      }
+    }
   );
 });
 
@@ -126,14 +149,14 @@ onBeforeUnmount(() => {
           <img class="z-10 absolute top-10 sm:top-20 lg:top-auto lg:bottom-20 right-0 lg:right-auto lg:left-10 opacity-5 select-none w-[100px] scale-[6.0] sm:scale-[10.0] lg:scale-[15.0] pointer-events-none" src="/icons/star.svg" alt="Star">
 
           <div class="flex flex-col items-start text-sm mb-8 mt-24 lg:mt-32">
-            <a class="mb-3 follower-trigger cursor-pointer hover:line-through flex items-center group" @click="router.go(-1)">
+            <a class="back mb-3 follower-trigger cursor-pointer hover:line-through flex items-center group" @click="router.go(-1)">
               <img class="group-hover:-translate-x-2 h-5 duration-500" src="/icons/arrow.svg" alt="Back Arrow">
               <span class="pl-2">{{ $t('projects.back') }}</span>
             </a>
 
-            <h1 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-medium">{{ project.name }}</h1>
+            <h1 class="info text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-medium">{{ project.name }}</h1>
 
-            <div class="info mt-8 lg:mt-16">
+            <div class="info mt-6 lg:mt-12">
               <ul class="flex flex-wrap tags">
                 <li>{{ project.description }}</li>
               </ul>
@@ -163,7 +186,9 @@ onBeforeUnmount(() => {
         </div>
 
         <div class="images w-full lg:w-[58.33%] grid gap-8 xl:gap-16 pb-16 lg:mt-32" :class="project.landscape ? 'grid-cols-1' : 'grid-cols-1 min-[450px]:grid-cols-2'">
-          <img v-for="(img, index) of project.images" class="z-20 shadow-lg w-full" :src="img" :alt="`Project Image ${ index+1 }`">
+          <div class="image w-full z-20" v-for="(img, index) of project.images">
+            <img class="shadow-lg h-full object-cover object-top" :src="img" :alt="`Project Image ${ index+1 }`">
+          </div>
         </div>
       </div>
     </div>
