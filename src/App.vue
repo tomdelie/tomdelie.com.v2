@@ -61,6 +61,7 @@ onMounted(() => {
   z-index: 999;
   width: 26px;
   height: 26px;
+  border-radius: 999px;
   pointer-events: none;
   user-select: none;
 }
@@ -69,6 +70,7 @@ onMounted(() => {
   position: fixed;
   background-color: rgba(72, 43, 37, 0.5);
   z-index: 999;
+  border-radius: 999px;
   width: 10px;
   height: 10px;
   pointer-events: none;

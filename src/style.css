@@ -12,10 +12,6 @@
   --margin: 1rem;
 }
 
-body {
-  overflow-y: scroll;
-}
-
 html, body {
   /* background: repeating-linear-gradient(
     -45deg,

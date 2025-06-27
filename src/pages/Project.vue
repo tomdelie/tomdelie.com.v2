@@ -155,7 +155,10 @@ onBeforeUnmount(() => {
           </div>
 
           <div class="info">
-            <a class="follower-trigger py-3 px-6 text-primary bg-secondary hover:bg-tertiary duration-300 text-center text-sm uppercase" :href="project.url" target="_blank" rel="noopener noreferrer">Visit website</a>
+            <a class="follower-trigger group relative rounded-full group py-4 text-primary bg-secondary hover:bg-tertiary duration-300 text-center text-sm uppercase w-[200px] flex justify-center" :href="project.url" target="_blank" rel="noopener noreferrer">
+              <span class="group-hover:translate-x-[-1.25rem] duration-500">Visit website</span>
+              <img class="absolute top-1/2 -translate-y-1/2 right-5 w-5 h-5 scale-0 duration-500 group-hover:scale-100" src="/icons/arrow-90.svg" alt="Arrow">
+            </a>
           </div>
         </div>
 

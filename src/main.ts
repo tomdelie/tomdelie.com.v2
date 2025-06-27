@@ -1,5 +1,5 @@
 import './style.css';
-import { createApp } from 'vue';
+import { createApp, nextTick } from 'vue';
 import { register } from 'swiper/element/bundle';
 import { createRouter, createWebHistory } from 'vue-router';
 import { gsap, Bounce } from 'gsap';
@@ -12,9 +12,16 @@ import Home from './pages/Home.vue';
 import Project from './pages/Project.vue';
 import NotFound from './pages/NotFound.vue';
 
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+
 const app = createApp(App);
 
 const router = createRouter({
+  scrollBehavior(_to, _from, _savedPosition) {
+    return false;
+  },
   history: createWebHistory(),
   routes: [
     {
@@ -46,12 +53,17 @@ let smoother = ScrollSmoother.create({
   normalizeScroll: true
 });
 
-router.beforeEach((to, _from, next) => {
+let scrollY = 0;
+
+router.beforeEach((to, from, next) => {
   const locale = to.params.locale as string;
+
+  if (from.name === 'Home') {
+    scrollY = window.scrollY;
+  }
 
   if (smoother) {
     smoother.kill();
-
     smoother = ScrollSmoother.create({
       smooth: 2,
       effects: true,
@@ -67,6 +79,15 @@ router.beforeEach((to, _from, next) => {
   }
 
   next();
+});
+
+router.afterEach((to) => {
+  nextTick(() => {
+    if (to.name === 'Home') {
+      smoother.refresh();
+      smoother.scrollTop(scrollY);
+    }
+  });
 });
 
 gsap.set(".cursor-follower", {scale: 1.0, xPercent: -50, yPercent: -50});

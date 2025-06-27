@@ -113,7 +113,7 @@ onMounted(() => {
       <textarea id="kqsdoiazcnize" name="kqsdoiazcnize" class="follower-trigger w-full p-4 border border-secondary bg-primary placeholder:text-secondary placeholder:opacity-70 text-sm min-h-[100px] max-h-[400px]" v-model="form.message" :disabled="success || loading" required rows="6" :placeholder="$t('contact.placeholder')"></textarea>
     </div>
 
-    <button type="submit" :disabled="success || loading" class="form-element follower-trigger py-3 md:py-4 w-[150px] md:w-[200px] text-primary mt-12 mx-auto flex items-center justify-center">
+    <button type="submit" :disabled="success || loading" class="form-element follower-trigger py-3 md:py-4 w-[150px] md:w-[200px] text-primary mt-12 mx-auto flex items-center justify-center rounded-full">
       <span v-if="!loading && !success" class="font-medium text-sm lg:translate-y-[1px]">{{ $t('contact.button') }}</span>
       
       <img v-if="loading" id="loading" src="/icons/loading.svg" width="18" alt="Loading">
