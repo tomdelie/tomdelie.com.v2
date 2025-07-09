@@ -6,13 +6,11 @@
   },
   "projects": {
     "back": "Retour",
-    "title": "Projets",
-    "taittinger": "Développement front et back end du site de réservation de dégustation et de visite pour Taittinger, une maison de Champagne française.",
-    "eatic": "Développement front et back end d'une application web et mobile de livraison de repas végétariens.",
-    "alchimie": "Développement d'un thème Wordpress pour Baccarat Alchimie, une expérience immersive à la Chapelle Saint-Anne.",
-    "cite-immersive-viking": "Développement d'un thème Wordpress pour la Cité Immersive Viking, un musée immersif à Rouen.",
-    "photocinelive": "Développement d'un thème Wordpress pour PhotoCineLive, spécialisé dans les solutions de production en direct.",
-    "pixel-world": "Développement d'un jeu de plateforme en 2D."
+    "taittinger": "J'ai développé le site de réservation de dégustations et de visites pour la maison de Champagne Taittinger. L'objectif était d'offrir une expérience en ligne fluide, élégante et sécurisée, alignée avec l'image haut de gamme de la marque, en facilitant la gestion des réservations et l'accès aux différentes offres proposées par Taittinger.",
+    "eatic": "J'ai rejoint Eatic pour participer au développement front-end et back-end de l'application web et mobile, dédiée à la livraison de repas végétariens. Le projet avait pour ambition de simplifier le parcours de commande et de proposer une interface accueillante, facilitant l'accès à une offre de repas sains et variés, tout en valorisant les engagements éthiques et durables de la marque.",
+    "cite-immersive-viking": "J'ai développé un thème Wordpress pour la Cité Immersive Viking, un musée immersif à Rouen. Le site a été conçu pour valoriser l'expérience proposée par le musée, faciliter la présentation des expositions, la réservation en ligne et la gestion des actualités, tout en respectant l'identité visuelle et l'univers immersif de la Cité Viking.",
+    "photocinelive": "Réalisation d'un thème Wordpress pour PhotoCineLive, entreprise spécialisée dans les solutions de production audiovisuelle en direct. Le projet visait à concevoir une interface moderne et fonctionnelle, adaptée aux besoins spécifiques du secteur, pour valoriser les services et les réalisations de la société.",
+    "pixel-world": "J'ai développé un jeu de plateforme 2D sur mon temps personnel, dans l'objectif de découvrir le développement de jeux vidéo et d'explorer de nouvelles compétences techniques. Ce projet m'a permis de me familiariser avec la conception de mécaniques de jeu, la création de niveaux et la gestion des animations, tout en m'initiant à l'utilisation du moteur Godot."
   },
   "contact": {
     "title": "<div><span>Et si on</span></div><div><span> collaborait ?</span></div>",

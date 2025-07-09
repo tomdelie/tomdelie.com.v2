@@ -6,12 +6,11 @@
   },
   "projects": {
     "back": "Back",
-    "taittinger": "Front and back-end development of the tasting and tour reservation website for Taittinger, a French Champagne house.",
-    "eatic": "Front and back-end development of a web and mobile app focused on vegetarian meal delivery.",
-    "alchimie": "Development of a WordPress theme for Baccarat Alchemy, an immersive experience at Chapelle Saint-Anne.",
-    "viking": "Development of a WordPress theme for Cité Immersive Viking, an immersive museum in Rouen.",
-    "photocinelive": "Development of a WordPress theme for PhotoCineLive, live production solutions.",
-    "pixel": "Development of a 2D platform game."
+    "taittinger": "I developed the booking website for tastings and tours for the French Champagne house Taittinger. The goal was to provide a smooth, elegant, and secure online experience, aligned with the brand's premium image, while facilitating the management of reservations and access to the various offers available from Taittinger.",
+    "eatic": "I joined Eatic to contribute to the front-end and back-end development of the web and mobile application dedicated to vegetarian meal delivery. The project aimed to streamline the ordering process and offer a welcoming interface, making it easy to access a range of healthy and varied meals while highlighting the brand's ethical and sustainable commitments.",
+    "cite-immersive-viking": "I developed a custom Wordpress theme for Cité Immersive Viking, an immersive museum in Rouen, France. The website was designed to showcase the museum's unique experience, facilitate the presentation of exhibitions, enable online booking, and manage news updates, all while respecting the visual identity and immersive universe of Cité Viking.",
+    "photocinelive": "Developed a custom Wordpress theme for PhotoCineLive, a company specializing in live audiovisual production solutions. The project consisted in creating a modern and functional interface, tailored to the specific needs of the sector, to highlight the company's services and achievements.",
+    "pixel-world": "I developed a 2D platformer game during my personal time, with the goal of discovering game development and exploring new technical skills. This project allowed me to get familiar with designing game mechanics, creating levels, and handling animations, while learning to use the Godot engine."
   },
   "contact": {
     "title": "<span>Let's work</span><span>together!</span>",
