@@ -47,12 +47,6 @@ app.mount('#app');
 register();
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-let smoother = ScrollSmoother.create({
-  smooth: 2,
-  effects: true,
-  normalizeScroll: true
-});
-
 let scrollY = 0;
 
 router.beforeEach((to, from, next) => {
@@ -60,15 +54,7 @@ router.beforeEach((to, from, next) => {
 
   if (from.name === 'Home') {
     scrollY = window.scrollY;
-  }
-
-  if (smoother) {
-    smoother.kill();
-    smoother = ScrollSmoother.create({
-      smooth: 2,
-      effects: true,
-      normalizeScroll: true
-    });
+    console.log('scrollY saved:', scrollY);
   }
 
   gsap.to(".cursor-follower", { scale: 1.0, duration: 0 });
@@ -82,10 +68,10 @@ router.beforeEach((to, from, next) => {
 });
 
 router.afterEach((to) => {
-  nextTick(() => {
+  nextTick().then(() => {
     if (to.name === 'Home') {
-      smoother.refresh();
-      smoother.scrollTop(scrollY);
+      window.scrollTo(0, scrollY);
+      console.log('scrollY restored:', scrollY);
     }
   });
 });

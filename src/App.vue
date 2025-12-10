@@ -16,8 +16,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="h-full">
+  <div class="overflow-hidden">
     <SplashScreen v-model:value="isSplashScreenVisible" />
+
     <NavLeft class="w-16 hidden lg:flex fixed bottom-0 z-50 left-0 pt-16 pb-9" />
 
     <div class="fixed top-0 left-0 w-full h-12 border-b border-secondary border-opacity-10 z-[100] bg-primary">
@@ -27,28 +28,18 @@ onMounted(() => {
           
           <RouterLink class="follower-trigger hover:line-through ml-6 text-sm" :to="switchLocalePath()">{{ locale.toUpperCase() }}</RouterLink>
         </div>
-
-        <div class="flex items-center">
-          <!-- <div class="follower-trigger hover:line-through text-sm cursor-pointer">Contact</div> -->
-        </div>
       </div>
     </div>
     
     <div class="cursor-follower hidden lg:block"></div>
     <div class="dot-follower hidden lg:block"></div>
 
-    <div id="smooth-wrapper">
-      <div id="smooth-content" class="overflow-x-hidden bg-primary">
-        
-        <div class="relative wrapper bg-primary">
-          <Grid class="absolute top-0 left-0 w-full h-full z-0" />
+    <div class="relative wrapper bg-primary">
+      <Grid class="absolute top-0 left-0 w-full h-full z-0" />
 
-          <template v-if="!isSplashScreenVisible">
-            <RouterView />
-          </template>
-        </div>
-
-      </div>
+      <template v-if="!isSplashScreenVisible">
+        <RouterView />
+      </template>
     </div>
 
   </div>

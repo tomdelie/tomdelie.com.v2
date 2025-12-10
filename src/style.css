@@ -28,7 +28,6 @@ html, body {
   background-color: var(--primary);
   color: var(--secondary);
   letter-spacing: 0.16px;
-  overflow-x: hidden;
 }
 
 #app { 
