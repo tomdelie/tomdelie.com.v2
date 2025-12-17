@@ -1,18 +1,16 @@
 <script setup lang="ts">
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import { computed, onBeforeUnmount, onMounted, reactive } from 'vue';
-import { useRoute, useRouter } from 'vue-router';
+import { useRoute } from 'vue-router';
 import gsap, { Bounce, Back } from 'gsap';
 import { useI18n } from 'vue-i18n';
 
-const router = useRouter();
 const route = useRoute();
-const { t } = useI18n();
+const { t, locale } = useI18n();
 
 type ProjectName = 'taittinger' | 'cite-immersive-viking' | 'eatic' | 'photocinelive' | 'pixel-world';
 type Project = {
   name: string;
-  description: string;
   url: string;
   date: string;
   tags: string[];
@@ -23,7 +21,6 @@ type Project = {
 const projects = reactive<{ [key in ProjectName]: Project }>({
   'taittinger': {
     name: 'Taittinger',
-    description: t('projects.taittinger'),
     url: 'https://book-a-visit.taittinger.fr',
     date: '2024 — 2025',
     tags: ['Vue.js', 'Nuxt', 'NestJS'],
@@ -32,7 +29,6 @@ const projects = reactive<{ [key in ProjectName]: Project }>({
   },
   'cite-immersive-viking': {
     name: 'Cité Immersive Viking',
-    description: t('projects.cite-immersive-viking'),
     url: 'https://viking.cites-immersives.fr',
     date: '2024',
     tags: ['Wordpress', 'ACF', 'Polylang'],
@@ -41,7 +37,6 @@ const projects = reactive<{ [key in ProjectName]: Project }>({
   },
   'eatic': {
     name: 'Eatic',
-    description: t('projects.eatic'),
     url: 'https://www.instagram.com/eatic_eat_ethic',
     date: '2021 — 2023',
     tags: ['TypeScript', 'Vue.js', 'Node.js'],
@@ -50,7 +45,6 @@ const projects = reactive<{ [key in ProjectName]: Project }>({
   },
   'photocinelive': {
     name: 'PhotoCineLive',
-    description: t('projects.photocinelive'),
     url: 'https://www.photocinelive.com',
     date: '2025',
     tags: ['Wordpress', 'ACF', 'Polylang'],
@@ -59,7 +53,6 @@ const projects = reactive<{ [key in ProjectName]: Project }>({
   },
   'pixel-world': {
     name: 'Pixel World',
-    description: t('projects.pixel-world'),
     url: 'https://tomdelie.itch.io/pixel-world',
     date: '2021',
     tags: ['Godot 3.2', 'GDScript'],
@@ -149,16 +142,16 @@ onBeforeUnmount(() => {
           <img class="z-10 absolute top-10 sm:top-20 lg:top-auto lg:bottom-20 right-0 lg:right-auto lg:left-10 opacity-5 select-none w-[100px] scale-[6.0] sm:scale-[10.0] lg:scale-[15.0] pointer-events-none" src="/icons/star.svg" alt="Star">
 
           <div class="flex flex-col items-start text-sm mb-8 mt-24 lg:mt-32">
-            <a class="back mb-3 follower-trigger cursor-pointer hover:line-through flex items-center group" @click="router.go(-1)">
+            <RouterLink :to="`/${locale}`" class="back mb-3 follower-trigger cursor-pointer hover:line-through flex items-center group">
               <img class="group-hover:-translate-x-2 h-5 duration-500" src="/icons/arrow.svg" alt="Back Arrow">
               <span class="pl-2">{{ $t('projects.back') }}</span>
-            </a>
+            </RouterLink>
 
             <h1 class="info text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-medium">{{ project.name }}</h1>
 
             <div class="info mt-6 lg:mt-12">
               <ul class="flex flex-wrap tags">
-                <li>{{ project.description }}</li>
+                <li>{{ t(`projects.${route.params.slug}`) }}</li>
               </ul>
             </div>
 
